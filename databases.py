@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 
 # You can change the name of your database, just change project.db to whatever you want (make sure to include .db at the end!)
 # Make sure you have the same name for the database in the app.py file!
-engine = create_engine('sqlite:///project.db')
+engine = create_engine('sqlite:///project.db', connect_args={'check_same_thread':False})
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
