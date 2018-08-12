@@ -1,3 +1,4 @@
+
 * {
     /* Removes extra spacing from all elements on the page */
     padding: 0;
@@ -5,7 +6,6 @@
 	    }
 	    
  h1 { font-family: Comfortaa; font-size: 24px;}
- a { font-family: Comfortaa; font-size: 24px;}
 
 body {
 	background-image: url("2.jpg");
@@ -25,9 +25,9 @@ body {
 }
 /* The navigation bar */
 .button{
-border-radius: 10px;
+border-radius: 15px;
 background-color: white;
-border: #228B22 solid 1px;
+border: #2E5E21 solid 1px;
 padding: 10px;
 font-family: Comfortaa; 
 font-size: 16px;
@@ -38,11 +38,21 @@ position: relative;
 bottom: 38px;
 }
 .button1:hover {
-	border-radius: 10px;
-    background-color: #228B22;
+	border-radius: 15px;
+    background-color: #2E5E21;
     color: white;
     padding: 10px;
 	font-family: Comfortaa; 
 	font-size: 20px;
 
 }
+
+ 
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
