@@ -2,6 +2,47 @@
     /* Removes extra spacing from all elements on the page */
     padding: 0;
     margin: 0;
+	    }
+	    
+ h1 { font-family: Comfortaa; font-size: 24px;}
+ a { font-family: Comfortaa; font-size: 24px;}
+
+body {
+	background-image: url("2.jpg");
+    background-color: #cccccc;
 }
 
-/* Put your styles BELOW this line */
+.fixed {
+  width: 100%;
+  position: fixed; 
+  background-color: #FFFFFF;
+  top:0%;
+  right:0%;
+}
+
+.expand {
+  height: 800px;
+}
+/* The navigation bar */
+.button{
+border-radius: 10px;
+background-color: white;
+border: #228B22 solid 1px;
+padding: 10px;
+font-family: Comfortaa; 
+font-size: 16px;
+transition-duration: 0.4s;
+margin: 0 20px;
+margin-bottom: -14px;
+position: relative;
+bottom: 38px;
+}
+.button1:hover {
+	border-radius: 10px;
+    background-color: #228B22;
+    color: white;
+    padding: 10px;
+	font-family: Comfortaa; 
+	font-size: 20px;
+
+}
