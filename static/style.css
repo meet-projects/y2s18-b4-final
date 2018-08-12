@@ -24,3 +24,25 @@ body {
   height: 800px;
 }
 /* The navigation bar */
+.button{
+border-radius: 10px;
+background-color: white;
+border: #228B22 solid 1px;
+padding: 10px;
+font-family: Comfortaa; 
+font-size: 16px;
+transition-duration: 0.4s;
+margin: 0 20px;
+margin-bottom: -14px;
+position: relative;
+bottom: 38px;
+}
+.button1:hover {
+	border-radius: 10px;
+    background-color: #228B22;
+    color: white;
+    padding: 10px;
+	font-family: Comfortaa; 
+	font-size: 20px;
+
+}

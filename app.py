@@ -49,6 +49,7 @@ def login():
         else:
             redirect(url_for('login'))
 
+
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
