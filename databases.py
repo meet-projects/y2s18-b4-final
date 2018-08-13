@@ -1,6 +1,6 @@
 # Database related imports
 # Make sure to import your tables!
-from model import Base, Users
+from model import *
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

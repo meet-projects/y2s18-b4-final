@@ -2,8 +2,8 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import add_user, get_all_users, check_password 
-
+from databases import *
+from model import *
 # Starting the flask app
 app = Flask(__name__)
 
@@ -11,11 +11,12 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     if request.method == 'GET':
+        return render_template('home.html', posts = get_all_msgs())
     else:
         name = request.form['name']
         msg = request.form['message']
         add_message(name,msg)
-    return(render_template(
+        return(render_template(
 
             "home.html",
             posts = get_all_msgs()
