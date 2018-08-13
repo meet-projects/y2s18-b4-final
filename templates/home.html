@@ -52,8 +52,13 @@
 </div>
 <div class = "posts">
     {%for post in posts%}
+    <div id = "post">
     <span>name: {{post.user_name}}</span>
     <br>
+    <span>content: {{post.message}}</span>
+    <br>
+  </div>
+
     {%endfor%}
 </div>
 
