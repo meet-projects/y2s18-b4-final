@@ -4,19 +4,52 @@
 
 
 <!DOCTYPE html>
+<body>
+
 <head>
-	<title></title>
+
+<style></style>
+<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+
+	<!-- Required tags to make the website responsive-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Add Bootstrap CSS to the page -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='login.css')}}">
 </head>
 <body>
-<form action = "/register" method = "post">
-	<input type="text" name="user_name" placeholder="Username">
-	<input type="password" name="password" placeholder="Password">
-	<br>
-	<input type="submit" value="submit">
 
+
+  
+
+<h1 style="background-color: ; text-align: center;" > REGISTRATION </h1>
+<form action = "/register" method = "post" style = "color:black">
+	<center>
+	 <label for="username"><b>username</b></label>
+	 <br>
+	<input type="text" name="user_name" placeholder="">
+	<br>
+	<br>
+	<label for="password"><b>Password</b></label>
+	<br>
+	<input type="password" name="password" placeholder="">
+	<br>
+	<br>
+	<button onclick="document.getElementById('id01').style.display='block'">register</button>
+	</center>
+	<center>
+	<a class="dropdown-item" href="{{url_for('login')}}">Already have an account? Log in!</a>
+</center>
+	<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
 </form>
 
 
 </body>
-</html>>
+</html>
+ 

@@ -38,4 +38,9 @@ def add_message(name, msg):
 def get_all_msgs():
 	messages = session.query(Posts).all()
 	return messages
-print(get_all_msgs())
+def delete_all_msgs():
+	session.query(Posts).delete()
+	session.commit()
+def delete_all_users():
+	session.query(Users).delete()
+	session.commit()
