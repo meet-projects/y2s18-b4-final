@@ -1,25 +1,25 @@
 * {
 
-    /* Removes extra spacing from all elements on the page */
-    padding: 0;
-    margin: 0;
+	/* Removes extra spacing from all elements on the page */
+	padding: 0;
+	margin: 0;
 
-	    }
-	   
+}
+
 
 body {
-  background-image: url("3.jpg");
-  overflow-x: hidden;
-    background-color: #cccccc;
+	background-image: url("3.jpg");
+	overflow-x: hidden;
+	background-color: #cccccc;
 }
 
 .fixed {
-  width: 100%;
-  position: fixed; 
-  background-color: #FFFFFF;
-  top:0%;
-  right:0%;
-  z-index: 99;
+	width: 100%;
+	position: fixed; 
+	background-color: #FFFFFF;
+	top:0%;
+	right:0%;
+	z-index: 99;
 
 }
 
@@ -65,24 +65,24 @@ body {
 
 .posts{
 
-  position:absolute;
-  top:30%;
-  text-align: center;
-  right:42%;
-  overflow: auto;
-  height:80%;
+	position:absolute;
+	top:30%;
+	text-align: center;
+	right:42%;
+	overflow: auto;
+	height:80%;
 
 }
 h1 {
-position: fixed;
-top: 21%;
+	position: fixed;
+	top: 21%;
 }
 
 .first_header {
-  background-color: #e2c65f;
-  position: absolute;
-  top:14%;
-  width:100%;
+	background-color: #e2c65f;
+	position: absolute;
+	top:14%;
+	width:100%;
 }
 #post{
 	border:1px solid black;
@@ -90,23 +90,24 @@ top: 21%;
 	margin:10px;
 	margin-right:-30%;
 	margin-left:-30%;
-  border:1px solid black;
-  padding:10px;
-  margin:10px;
-  margin-right:-20%;
-  margin-left:-20%;
+	border:1px solid black;
+	padding:10px;
+	margin:10px;
+	margin-right:-20%;
+	margin-left:-20%;
 }
 a{
-  text-decoration: none;
+	text-decoration: none;
 }
 .posting{
-  position:fixed;
-  top:26%;
+	position:fixed;
+	top:26%;
+	left:0%;
 }
 body{
-  color:white;
-  margin-right:-30%;
-  margin-left:-30%;
+	color:white;
+	margin-right:-30%;
+	margin-left:-30%;
 
 }
 
