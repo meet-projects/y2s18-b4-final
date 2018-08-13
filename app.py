@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     if request.method == 'GET':
-        
+
         return render_template('home.html', posts = get_all_msgs())
     else:
         name = request.form['name']
@@ -49,7 +49,9 @@ def login():
             redirect(url_for('home'))
         else:
             redirect(url_for('login'))
-
+@app.route('/about_us')
+def about_us():
+    return render_template('about_us.html')
 
 # Running the Flask app
 if __name__ == "__main__":
