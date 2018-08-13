@@ -51,8 +51,9 @@
 
 </div>
 <div class = "posts">
-    <span>name: {{posts.user_name}}</span>
-
+    {%for post in posts%}
+    <span>name: {{post.user_name}}</span>
+    {%endfor%}
 </div>
 
     </body>

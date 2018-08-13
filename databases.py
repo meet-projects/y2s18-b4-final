@@ -36,4 +36,4 @@ def add_message(name, msg):
 def get_all_msgs():
 	messages = session.query(Posts).all()
 	return messages
-print(get_all_users())
+print(get_all_msgs())

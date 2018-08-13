@@ -11,6 +11,7 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     if request.method == 'GET':
+        
         return render_template('home.html', posts = get_all_msgs())
     else:
         name = request.form['name']
