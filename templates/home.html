@@ -22,11 +22,12 @@
 
 	<div id="share-buttons">
 
+<<<<<<< HEAD
 		<!-- Email -->
 		<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
 			<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
 		</a>
-		<br><br>
+		<br>
 		<!-- Facebook -->
 		<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
 			<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
@@ -41,6 +42,18 @@
 		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
 			<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
 		</a>
+=======
+      <div class="fixed">
+ <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
+   <a class="button button1" href="#post">Post Dtrash</a> 
+     <a class="button button1" href="#map">Map Dtrash</a>
+  <a class="button button1" href="#report">Report Dtrash</a>
+  <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
+  <a  class="button button1" href="#contact">Contact Us</a>
+  <a id = "logout" href = "{{ url_for('logout') }}">log out!</a>
+</div>
+<center><h1> hello {{username}}</h1></center>
+>>>>>>> ea2bd267ce032e0f922985786bd9375bd562f715
 
 		<br><br>
 		<!-- Print -->
@@ -48,6 +61,32 @@
 			<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
 		</a>
 
+<<<<<<< HEAD
+=======
+</div>
+<br>
+<br>
+<div class = "posting">
+
+  <form action = "/home" method = "post">
+
+
+    <input type = "text" name = "message" placeholder="enter your post here :)">
+    <br>
+    <input type = "submit" value = "Post!">
+
+  </form>
+
+</div>
+<div class = "posts">
+    {%for post in posts%}
+    <div id = "post">
+    <span>name: {{post.user_name}}</span>
+    <br>
+    <span>content: {{post.message}}</span>
+    <br>
+  </div>
+>>>>>>> ea2bd267ce032e0f922985786bd9375bd562f715
 
 	</div>
 	<div class = "posts">
