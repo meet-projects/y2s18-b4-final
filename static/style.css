@@ -60,6 +60,7 @@ body {
 	display: inline;
 	position:fixed;
 	right:0%;
+	z-index: 10000000;
 }
 
 .posts{
