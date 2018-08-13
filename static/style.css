@@ -54,7 +54,7 @@ padding: 5px;
 border: 0;
 box-shadow: 0;
 display: inline;
-position:absolute;
+position:fixed;
 right:0%;
 }
 
