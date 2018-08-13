@@ -12,25 +12,25 @@ app.config['SECRET_KEY'] = 'asdf movies'
 def home():
     if 'user_name' in session:
         username = session['user_name']
-    if request.method == 'GET':
+        print ("hello "+username)
+        if request.method == 'GET':
 
-        return render_template('home.html', posts = get_all_msgs())
+            return render_template('home.html', posts = get_all_msgs(), username = username)
+        else:
+            name = request.form['name']
+            msg = request.form['message']
+            add_message(name,msg)
+            return render_template(
+
+                "home.html",
+                posts = get_all_msgs(),
+                username = username
+
+
+                )
     else:
-        name = request.form['name']
-        msg = request.form['message']
-        add_message(name,msg)
-        return(render_template(
+        return redirect(url_for('login'))
 
-            "home.html",
-            posts = get_all_msgs(),
-            username = username
-
-
-            )
-
-
-
-        )
 #register route
 @app.route('/register', methods=['GET', 'POST'])
 def register():
