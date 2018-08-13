@@ -18,12 +18,11 @@
 
 <div class="fixed">
  <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
-    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
-     <a class="button button1" href="#map">Map Dtrash</a>
-  <a class="button button1" href="#report">Report Dtrash</a>
-  <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
-  <a  class="button button1" href="#contact">Contact Us</a>
-</div>
+   <button  class="button button1" href="#post">Post Dtrash</button> 
+     <button class="button button1" href="#map">Map Dtrash</button>
+  <button class="button button1" href="#report">Report Dtrash</button>
+  <button  class="button button1" href="#about">About Us</button>
+  <button  class="button button1" href="#contact">Contact Us</button>
 </div>
 
 <div id="share-buttons">
@@ -59,17 +58,19 @@
 
 <center>
 <div class = "first_header">
-	<h2> A</h2>
+	<br>
+	<h2> About Us</h2>
+	<br>
 	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
+      <img class="d-block w-100" src="{{url_for('static', filename = '2222.jpg')}}" alt="First slide" height="" ="256" width="" ="144">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
+      <img class="d-block w-100" src="{{url_for('static', filename = '4.jpg')}}" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
+      <img class="d-block w-100" src="{{url_for('static', filename = '222.jpg')}}" alt="Third slide">
     </div>
   </div>
 </div>
