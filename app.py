@@ -61,12 +61,20 @@ def login():
 
         username = request.form['user_name']
         password = request.form['password']
-        if check_password(username,password) == True:
-            print("good password")
-            session['user_name'] = username
-            return(redirect(url_for('home')))
+        accounts = get_all_users()
+        is_here = False
+        for account in accounts:
+            if account.user_name == username:
+                is_here = True
+        if is_here == True:
+            if check_password(username,password) == True:
+                print("good password")
+                session['user_name'] = username
+                return(redirect(url_for('home')))
+            else:
+                return(redirect(url_for('login')))
         else:
-            return(redirect(url_for('login')))
+            return redirect(url_for('login'))
 @app.route('/about_us')
 def about_us():
     return render_template('about_us.html')
