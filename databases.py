@@ -1,13 +1,13 @@
 # Database related imports
 # Make sure to import your tables!
-from model import Base, Users
+from model import *
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # You can change the name of your database, just change project.db to whatever you want (make sure to include .db at the end!)
 # Make sure you have the same name for the database in the app.py file!
-engine = create_engine('sqlite:///project.db')
+engine = create_engine('sqlite:///project.db', connect_args={'check_same_thread':False})
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -19,7 +19,9 @@ def add_user(user_name, password):
     account = Users(user_name=user_name, password=password)
     session.add(account)
     session.commit()
-
+def get_user_by_name(name):
+	account = session.query(Users).filter_by(user_name = name).first()
+	return account
 def get_all_users():
     users = session.query(Users).all()
     return users
@@ -29,4 +31,11 @@ def check_password(user_name, entered_password):
 		return True
 	else:
 		return False
-print(get_all_users())
+def add_message(name, msg):
+	msg = Posts(user_name = name, message = msg)
+	session.add(msg)
+	session.commit()
+def get_all_msgs():
+	messages = session.query(Posts).all()
+	return messages
+print(get_all_msgs())

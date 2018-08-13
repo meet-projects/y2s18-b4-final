@@ -17,3 +17,8 @@ class Users(Base):
 
     def __repr__(self):
         return ("User Name: {}, Password: {}".format(self.user_name, self.password))
+class Posts(Base):
+	__tablename__ = "messages"
+	id = Column(Integer, primary_key = True)
+	user_name = Column(String)
+	message = Column(String)
