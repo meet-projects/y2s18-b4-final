@@ -5,7 +5,8 @@
     margin: 0;
 	    }
 	    
- h1 { font-family: Comfortaa; font-size: 24px; color: white;}
+	h1 { font-family: Comfortaa; font-size: 24px; color: white;}
+	h2 { font-family: Comfortaa; font-size: 24px; color: black;}
 
 body {
 	background-image: url("3.jpg");
@@ -82,4 +83,8 @@ top: 25%;
   margin:10px;
   margin-right:-30%;
   margin-left:-30%;
+}
+
+.loginform {
+	width: 50%;
 }

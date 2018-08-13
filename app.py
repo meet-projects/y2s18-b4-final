@@ -48,9 +48,12 @@ def login():
     else:
         render_template('login.html')
 
+        print("trying to login")
+
         username = request.form['user_name']
         password = request.form['password']
         if check_password(username,password) == True:
+            print("good password")
             session['user_name'] = username
             return(redirect(url_for('home')))
         else:
