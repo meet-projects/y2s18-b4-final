@@ -11,12 +11,11 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     if request.method == 'GET':
-        return render_template('home.html')
     else:
         name = request.form['name']
         msg = request.form['message']
         add_message(name,msg)
-        return(render_template(
+    return(render_template(
 
             "home.html",
             posts = get_all_msgs()
