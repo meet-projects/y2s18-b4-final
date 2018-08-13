@@ -19,7 +19,9 @@ def add_user(user_name, password):
     account = Users(user_name=user_name, password=password)
     session.add(account)
     session.commit()
-
+def get_user_by_name(name):
+	account = session.query(Users).filter_by(user_name = name).first()
+	return account
 def get_all_users():
     users = session.query(Users).all()
     return users
