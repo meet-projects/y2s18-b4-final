@@ -66,7 +66,7 @@ body {
 .posts{
 
 	position:absolute;
-	top:30%;
+	top:36%;
 	text-align: center;
 	right:42%;
 	overflow: auto;
@@ -78,6 +78,10 @@ h1 {
 	top: 21%;
 }
 
+h2{
+font-family: Comfortaa !important; 
+}
+
 .first_header {
 	background-color: #e2c65f;
 	position: absolute;
@@ -85,24 +89,31 @@ h1 {
 	width:100%;
 }
 #post{
-	border:1px solid black;
+	border-top:1px solid black;
 	padding:10px;
 	margin:10px;
 	margin-right:-30%;
 	margin-left:-30%;
-	border:1px solid black;
-	padding:10px;
-	margin:10px;
-	margin-right:-20%;
-	margin-left:-20%;
+
+  padding:10px;
+  margin:10px;
+  margin-right:-20%;
+  margin-left:-20%;
 }
 a{
-	text-decoration: none;
+  color:black;
+  text-decoration: none;
+  font-family: Comfortaa; 
 }
+a:visited{
+	color:black;
+}
+
 .posting{
 	position:fixed;
 	top:26%;
 	left:0%;
+	z-index:1000;
 }
 body{
 	color:white;
@@ -117,3 +128,12 @@ body{
 
 }
 
+.carousel-inner {
+    position: relative;
+    max-width: 40%;
+    overflow: hidden;
+    right: 30%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e2c65f;
+}
