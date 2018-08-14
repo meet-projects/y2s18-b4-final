@@ -82,7 +82,11 @@ def login():
             return redirect(url_for('login'))
 @app.route('/about_us')
 def about_us():
-    return render_template('about_us.html')
+    if 'user_name' in session:
+        username = session['user_name']
+        return render_template('about_us.html', username = username)
+    else:
+        return render_template('login.html')
 
 @app.route('/logout')
 def logout():
@@ -91,13 +95,25 @@ def logout():
 
 @app.route('/contact', methods=['GET','POST'])
 def contact_us():
-    return render_template('contact.html')
+    if 'user_name' in session:
+        username = session['user_name']
+        return render_template('contact.html', username = username)
+    else:
+        return render_template('login.html')
 @app.route('/map')
 def map():
-    return render_template('map.html')
+    if 'user_name' in session:
+        username = session['user_name']
+        return render_template('map.html', username = username)
+    else:
+        return render_template('login.html')
 @app.route('/report', methods=['GET','POST'])
 def report():
-    return render_template('report.html')
+    if 'user_name' in session:
+        username = session['user_name']
+        return render_template('report.html', username = username)
+    else:
+        return render_template('login.html')
 
 # Running the Flask app
 if __name__ == "__main__":
