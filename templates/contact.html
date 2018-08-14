@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
 		  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
 </head>
@@ -25,7 +26,7 @@
       <option value="jerusalem">jerusalem</option>
       <option value="tel aviv">tel aviv</option>
       <option value="haifa">haifa</option>
-      
+
 
 
     </select>
@@ -36,18 +37,22 @@
     <br>
     <br>
 
-
+  
    
     <label for="message">message</label>
     <textarea id="message" name="message" placeholder="Write something.." style="height:20px"></textarea>
     <br>
     <br>
 
-    <input type="submit" value="Submit">
+    <input type="submit" class="btn btn-outline-success" value="Submit">
 </center>
 
     </form>
 </div>
+
+<script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap.bundle.js')}}"></script>
+
 
 </body>
 </html>
