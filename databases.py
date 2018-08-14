@@ -44,3 +44,11 @@ def delete_all_msgs():
 def delete_all_users():
 	session.query(Users).delete()
 	session.commit()
+def add_contact(first_name, second_name, city, subject, message):
+	contact = Contacts(first_name = first_name, second_name = second_name, city = city, subject = subject, message = message)
+	session.add(contact)
+	session.commit()
+def query_contacts():
+	contacts = session.query(Contacts).all()
+	return contacts
+print(query_contacts())
