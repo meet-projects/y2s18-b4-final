@@ -20,15 +20,25 @@ def home():
             name = username
             msg = request.form['message']
             img = request.form['image']
-            add_message(name,msg,img)
-            return render_template(
+            if msg == "" and img == "":
+                return render_template(
 
-                "home.html",
-                posts = reversed(get_all_msgs()),
-                username = username
+                    "home.html",
+                    posts = reversed(get_all_msgs()),
+                    username = username
 
 
-                )
+                    )
+            else:
+                add_message(name,msg,img)
+                return render_template(
+
+                    "home.html",
+                    posts = reversed(get_all_msgs()),
+                    username = username
+
+
+                    )
     else:
         return redirect(url_for('login'))
 
