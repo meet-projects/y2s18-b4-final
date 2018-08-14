@@ -18,12 +18,12 @@
 	<body>
 
 		<center>
+			<img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" >
+
 			<div class="register">
 
 				<form  action = "/register" method = "post" style = "color:black">
 					<div>
-						<img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" >
-						<br>
 						<font color="black"><label>Email Adress</label></font>
 						<input type="email" class="form-control" name="email" placeholder="Enter email">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -44,7 +44,7 @@
 						<input type="checkbox" class="form-check-input" id="exampleCheck1">
 						<label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
 					</div>
-					<button onclick="document.getElementById('id01').style.display='block'"type="submit" class="btn btn-primary">Register</button>
+					<button onclick="document.getElementById('id01').style.display='block'"type="submit" class="btn btn-primary registerin">Register</button>
 					<div class="dropdown-divider"></div>
 
 					<a class="dropdown-item" href="{{url_for('login')}}">Already have an account? Log in!</a>

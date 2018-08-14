@@ -128,10 +128,10 @@ body{
 .loginform {
 	border-radius: 30px;
 	background-color: rgba(255,255,255,0.5);
-	width: 18%;
+	width: 14%;
 	font-family: Comfortaa;
 	padding:15px;
-
+	margin-top: 10px;
 }
 
 .carousel-inner {
@@ -151,10 +151,10 @@ body{
 	font-family: Comfortaa;
 	padding:15px;
 	color; black;
-
+	margin-top: 7px;
 }
 
-.logout: hover{
+.logout:hover{
 	color: grey;
 }
 
@@ -165,7 +165,7 @@ body{
 	color: #2E5E21;
 }
 
-.postbutton: hover{
+.postbutton:hover{
 	background-color: #2E5E21;
 	color: white;
 	font-family: Comfortaa; 
@@ -173,5 +173,10 @@ body{
 
 .input-group{
 		font-family: Comfortaa; 
+
+}
+
+.registerin{
+		background-color: #2E5E21;
 
 }
