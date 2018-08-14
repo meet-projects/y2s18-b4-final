@@ -4,26 +4,50 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
-  	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='map.css')}}">
+
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='map.css')}}">
+
 
   	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 	<title>Map</title>
 	<style>
-
-		.map{
-			position:absolute;
-			top:17%;
-			text-align:center;
-			margin-right:47%;
-			margin-left:53%;
-		}
-
 
 	</style>
 
 </head>
 
 <body>
+	<div id="share-buttons">
+
+		<!-- Email -->
+		<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+			<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+		</a>
+		<br><br>
+		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+		</a>
+		<br> <br>
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+		</a>
+		<br> <br>
+		<!-- LinkedIn -->
+		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+		</a>
+		<br><br>
+		<!-- Print -->
+		<a href="javascript:;" onclick="window.print()">
+			<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+		</a>
+
+	</div>
+
+
 	<div class="fixed" style="font-family: Comfortaa; color:black;">
     <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
     <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
@@ -34,11 +58,9 @@
     <a> hello {{username}}!   </a>
     <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
   </div>
-	<div class = "map">
 
-	<iframe src="https://www.google.com/maps/d/embed?mid=1VLoNnGRLL66xhQ5NQUeTfAh7CY9_iWGl" width="640" height="480"></iframe>
-</div>
-
+	
+<p>Find a recycle bin near you!<p>
 
 </body>
 

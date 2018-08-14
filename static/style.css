@@ -185,3 +185,11 @@ body{
 		background-color: #2E5E21;
 
 }
+
+.map{
+			position:absolute;
+			top:20%;
+			text-align:center;
+			margin-right:47%;
+			margin-left:53%;
+		}
