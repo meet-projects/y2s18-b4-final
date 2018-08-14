@@ -140,7 +140,7 @@ body{
     overflow: hidden;
     right: 30%;
     border-style: solid;
-    border-width: 10px;
+    border-width: 20px;
     border-color: #e2c65f;
 }
 
@@ -198,3 +198,12 @@ body{
 			width:100vw;
 			height:90%;
 		}
+.aboutus{
+	display: inline;
+    position: absolute;
+    top:10px;
+    padding:50px;
+    left: 40%;
+    font-family: Comfortaa;
+
+}
