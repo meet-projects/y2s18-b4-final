@@ -19,7 +19,8 @@ def home():
         else:
             name = username
             msg = request.form['message']
-            add_message(name,msg)
+            img = request.form['image']
+            add_message(name,msg,img)
             return render_template(
 
                 "home.html",

@@ -191,10 +191,10 @@ body{
 
 }
 
-.map{
+#map{
 			position:absolute;
-			top:20%;
-			text-align:center;
-			margin-right:47%;
-			margin-left:53%;
+			top:13%;
+			margin-left:30%;
+			width:100vw;
+			height:90%;
 		}

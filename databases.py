@@ -31,8 +31,8 @@ def check_password(user_name, entered_password):
 		return True
 	else:
 		return False
-def add_message(name, msg):
-	msg = Posts(user_name = name, message = msg)
+def add_message(name, msg, img):
+	msg = Posts(user_name = name, message = msg, image = img)
 	session.add(msg)
 	session.commit()
 def get_all_msgs():
