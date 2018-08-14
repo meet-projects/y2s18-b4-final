@@ -51,4 +51,8 @@ def add_contact(first_name, second_name, city, subject, message):
 def query_contacts():
 	contacts = session.query(Contacts).all()
 	return contacts
+def add_pos(name, longi, lat):
+	pos = Position(name = name, longitude = longi, latitude = lat)
+	session.add(pos)
+	session.commit()
 print(query_contacts())

@@ -34,3 +34,10 @@ class Contacts(Base):
 
     def __repr__(self):
         return ("First Name: {}, Last name: {}, City: {}, Subject: {}, Message: {}".format(self.first_name, self.second_name, self.city, self.subject, self.message))
+
+class Position(Base):
+    __tablename__ = "positions"
+    id = Column(Integer, primary_key = True)
+    name = Column(String)
+    longitude = Column(Float)
+    latitude = Column(Float)

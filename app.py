@@ -119,7 +119,15 @@ def map():
 def report():
     if 'user_name' in session:
         username = session['user_name']
-        return render_template('report.html', username = username)
+
+        if request.method == 'GET':
+            return render_template('report.html', username = username)
+        else:
+            name = form.request['location_name']
+            longi = form.request['longitude']
+            lat = form.request['latitude']
+            add_pos(name,longi,lat)
+            return render_template('report.html', username = username)
     else:
         return render_template('login.html')
 
