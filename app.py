@@ -43,9 +43,14 @@ def register():
             if request.form['user_name'] == account.user_name:
                 is_open = False
         if is_open == True:
-            add_user(request.form['user_name'],
-                request.form['password'])
-            return redirect(url_for('login'))
+            password = request.form['password']
+            confirm = request.form['password-confirm']
+            if password == confirm:
+                add_user(request.form['user_name'],
+                    request.form['password'])
+                return redirect(url_for('login'))
+            else:
+                return redirect(url_for('register'))
         else:
             return  redirect(url_for('register'))
 
@@ -84,6 +89,15 @@ def logout():
     session.pop('user_name', None)
     return redirect(url_for('login'))
 
+@app.route('/contact', methods=['GET','POST'])
+def contact_us():
+    return render_template('contact.html')
+@app.route('/map')
+def map():
+    return render_template('map.html')
+@app.route('/report', methods=['GET','POST'])
+def report():
+    return render_template('report.html')
 
 # Running the Flask app
 if __name__ == "__main__":
