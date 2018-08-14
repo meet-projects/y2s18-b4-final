@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
-		  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
 </head>
 <body>
 <h1 style="background-color: ; text-align: center;" > CONTACT US </h1>
+<div class="fixed" style="font-family: Comfortaa; color:black;">
+    <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
+    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+    <a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
+    <a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
+    <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
+    <a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
+    <a> hello {{username}}!   </a>
+    <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
+  </div>
 <CENTER>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
-  <form action="action_page.php">
+  <form action="/contact" method="post">
   	<label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
     <br>

@@ -74,6 +74,8 @@ body {
 
 }
 h1 {
+
+
 	position: fixed;
 	top: 21%;
 }
@@ -99,6 +101,8 @@ font-family: Comfortaa !important;
   margin:10px;
   margin-right:-20%;
   margin-left:-20%;
+  	background-color: rgba(255,255,255, 0.5);
+
 }
 a{
   color:black;
@@ -111,8 +115,6 @@ a:visited{
 
 .posting{
 	position:fixed;
-	top:26%;
-	left:0%;
 	z-index:1000;
 }
 body{
@@ -123,8 +125,11 @@ body{
 }
 
 .loginform {
-	width: 20%;
-	font-family: Comfortaa; 
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	width: 18%;
+	font-family: Comfortaa;
+	padding:15px;
 
 }
 
@@ -139,6 +144,10 @@ body{
 }
 
 .register{
-	width: 20%;
-	font-family: Comfortaa; 
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	width: 18%;
+	font-family: Comfortaa;
+	padding:15px;
+
 }
