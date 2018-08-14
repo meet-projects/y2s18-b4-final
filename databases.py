@@ -31,8 +31,8 @@ def check_password(user_name, entered_password):
 		return True
 	else:
 		return False
-def add_message(name, msg):
-	msg = Posts(user_name = name, message = msg)
+def add_message(name, msg, img):
+	msg = Posts(user_name = name, message = msg, image = img)
 	session.add(msg)
 	session.commit()
 def get_all_msgs():
@@ -51,4 +51,12 @@ def add_contact(first_name, second_name, city, subject, message):
 def query_contacts():
 	contacts = session.query(Contacts).all()
 	return contacts
-print(query_contacts())
+def add_pos(name, longi, lat):
+	pos = Position(name = name, longitude = longi, latitude = lat)
+	session.add(pos)
+	session.commit()
+def query_pos():
+	return session.query(Position).all()
+def delete_all_pos():
+	session.query(Position).delete()
+	session.commit()

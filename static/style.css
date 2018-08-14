@@ -48,6 +48,7 @@ body {
 	padding: 10px;
 	font-family: Comfortaa; 
 	font-size: 20px;  
+	text-decoration: none;
 
 }
 
@@ -127,10 +128,10 @@ body{
 .loginform {
 	border-radius: 30px;
 	background-color: rgba(255,255,255,0.5);
-	width: 18%;
+	width: 14%;
 	font-family: Comfortaa;
 	padding:15px;
-
+	margin-top: 10px;
 }
 
 .carousel-inner {
@@ -139,7 +140,7 @@ body{
     overflow: hidden;
     right: 30%;
     border-style: solid;
-    border-width: 10px;
+    border-width: 20px;
     border-color: #e2c65f;
 }
 
@@ -150,10 +151,10 @@ body{
 	font-family: Comfortaa;
 	padding:15px;
 	color; black;
-
+	margin-top: 7px;
 }
 
-.logout: hover{
+.logout:hover{
 	color: grey;
 }
 
@@ -163,16 +164,46 @@ body{
 	font-size: 16px;
 	color: #2E5E21;
 }
+.postbutton1{
+	background-color: rgba(225,255,255,0.9);
+	color:; #2E5E21;
+	border-color: #2E5E21;
+}
 
-.input-group-append: hover{
+.postbutton:hover{
 	background-color: #2E5E21;
 	color: white;
-	padding: 10px;
 	font-family: Comfortaa; 
-	font-size: 20px;  
 }
 
 .input-group{
 		font-family: Comfortaa; 
+
+}
+
+.registerin{
+		background-color: #2E5E21;
+
+}
+
+.registerin1:hover{
+		background-color: #2E5E21;
+
+}
+
+#map{
+			position:absolute;
+			top:13%;
+			margin-left:30%;
+			width:100vw;
+			height:90%;
+		}
+.aboutus{
+	display: inline;
+    position: absolute;
+    top:10px;
+    padding:50px;
+    left: 40%;
+    font-family: Comfortaa;
 
 }

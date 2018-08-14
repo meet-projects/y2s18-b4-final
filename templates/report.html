@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>report a bin</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 </head>
 <body>
-
-<h1 style="background-color: ; text-align: center;" > REPORT </h1>
+<div class="fixed" style="font-family: Comfortaa; color:black;">
+    <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
+    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+    <a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
+    <a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
+    <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
+    <a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
+    <a> hello {{username}}!   </a>
+    <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="background-color: ; text-align: center;" > Welcome </h1>
 <center>
+<!-- 
+
+
  <form action="action_page.php">
   	<label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -21,10 +42,43 @@
     <br>
     <br>	
     <input type="submit" class="btn btn-outline-success" value="Submit">
+  </form> -->
 
 
-    
-</form>
+  <p>Click the button to add your coordinates.</p>
+  <p id="demo"></p>
+
+  <script>
+  var x = document.getElementById("demo");
+
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+  }
+
+  function showPosition(position) {
+      // x.innerHTML = "Latitude: " + position.coords.latitude + 
+      // "<br>Longitude: " + position.coords.longitude;
+      document.getElementById('long').value= position.coords.longitude;
+      document.getElementById('lati').value= position.coords.latitude;
+  }
+
+  </script>
+
+  <button onclick="getLocation()">Add your location!</button>
+  <br><br>
+  <form action='/report' method="post">
+    <input type="text" name="location_name" placeholder="name">
+    <br><br>
+    <input id="long" type="text" name="longitude" placeholder="longitude">
+    <br><br>
+    <input id = "lati" type="text" name="latitude" placeholder="latitude">
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
 </center>
 
 

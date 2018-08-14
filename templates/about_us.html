@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>recycleDtrash</title>
-  	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 
 
@@ -28,134 +28,138 @@
 </head>
 <body>
 
-<div class="fixed" style="font-family: Comfortaa; color:black;">
-    <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
-    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
-    <a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
-    <a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
-    <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
-    <a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
-    <a> hello {{username}}!   </a>
-    <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
-  </div>
-  
-
-<div id="share-buttons">
-    
-    <!-- Email -->
-    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
-        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
-    </a>
- <br><br>
-    <!-- Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-    </a>
-   <br> <br>
-    <!-- Google+ -->
-    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
-    </a>
-   <br> <br>
-    <!-- LinkedIn -->
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
-    </a>
-    
-    <br><br>
-    <!-- Print -->
-    <a href="javascript:;" onclick="window.print()">
-        <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
-    </a>
-    
-
-</div>
-
-<center>
-<div class = "first_header">
-
-	<h2> About Us</h2>
-	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="{{url_for('static', filename = '2222.jpg')}}" alt="First slide"  >
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{url_for('static', filename = '4.jpg')}}" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{url_for('static', filename = '222.jpg')}}" alt="Third slide">
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="service_header">
-	<h2> OUR SERVICE</h2>
-</div>
-
-<div class = "first_paragraph">
-
-	<p>  RecycleDtrash places recyclebins all over the city.Our weibsite gives the user information on wehre to find the nearest one, using a map planted with all our bins.</p><!-- Our website provides the public with a map that  -->
-	 <!-- RecycleDtrash is a website where one can find recycling bins all over jerusalem, planted on a map. One can post public reviews and feedback. By using recycleDtrash you are reducing the accumulating garbage and pollution in our world, making a better living environment for you, your family and for everyone.</p> -->
-</div>
-<div class = "second_header">
-	<h2> The problem RecycleDtrash solves.</h2>
-</div>
+	<div class="fixed" style="font-family: Comfortaa; color:black;">
+		<img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
+		<a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+		<a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
+		<a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
+		<a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
+		<a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
+		<a> hello {{username}}!   </a>
+		<a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
+	</div>
 
 
-<div class = "second_paragraph">
-	<p> polution is becoming a more and more dire problem. As only a small portion of plastic, paper and cardboard are getting recycled. Garbage is slowly coverig our planet, if this phenomenon were to continue, the amount of garbage would be too great to fit on our planet.</p>
-</div>
-<div class = "third_header">
-	<h2> Other features</h2>
-</div>
-<div class = "third_paragraph">
-	<p> Once you have made an account,you can post public reviews and feedback on our website</p>
-</div>
-<div class ="our_team">
-	<h2> OUR TEAM.</h2>
-</div>
-<div class = "mission_header">
-<h2>OUR MISSION</h2>
-</div>
+	<div id="share-buttons">
 
-<div class = "mission_paragraph">
-	<p>our mission is to reduce the amount of garbage thrown into our environment, by increasing the amount of garbage recycled.</p>
-</div>
+		<!-- Email -->
+		<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+			<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+		</a>
+		<br><br>
+		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+		</a>
+		<br> <br>
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+		</a>
+		<br> <br>
+		<!-- LinkedIn -->
+		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+		</a>
 
-<div class = "vision_header">
-	<h2> OUR VISION</h2>
-</div>
-
-<div class = "vision_paragraph">
-	<p> We vision a cleaner and greener world, where less garbage is thrown into landfills, and more garbage recycled and reused. 
-
-<div class = "team_paragraph">
-	<p> 
-	<ul>
-
-		<li>NOAM GLOBERMAN </li>
-		<li>EINAV RAVIV</li>
-		<li>GASAN ASHAB</li>
-		<li>SALWA KHALDI</li>
-		<li>IDAN ZAMIR</li>
-	</ul>
-	</p>
-</div>
-<div class = "about_team_header">
-	<h2> ABOUT OUR TEAM</h2>
-</div>
-
-<div class = "about_team_paragraph">
-	<p> We are a group of year 2 students in the MEET program.For the past Two weeks we have been learning how to make a website and this is the product of our end of the summer project.
-</center>
- <!-- Add JQuery and Bootstrap JS to the page -->
-<!-- JQuery MUST BE BEFORE BOOTSTRAP -->
-<script src="{{ url_for('static', filename='jquery.js') }}"></script>
-<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+		<br><br>
+		<!-- Print -->
+		<a href="javascript:;" onclick="window.print()">
+			<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+		</a>
 
 
+	</div>
 
-</body>
-</html>
+	<center>
+		<div class = "first_header">
+
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="{{url_for('static', filename = '7.jpeg')}}" alt="First slide"  >
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="{{url_for('static', filename = '4.jpg')}}" alt="Second slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="{{url_for('static', filename = '222.jpg')}}" alt="Third slide">
+					</div>
+				</div>
+			</div>
+			<div class="aboutus"><h2> About Us</h2>
+			<p style="text-align: justify;">RecycleDtrash is a website where one can find recycling bins all over the world, planted on a map. One can post public reviews and feedback, report about new bins and get into an enviornment-freindly community! By using RecycleDtrash you are reducing the accumulating garbage and pollution in our world, making a better living environment for you, your family and for everyone. </p>
+		</div>
+		</div>
+
+		<div class="service_header">
+			<h2> OUR SERVICE</h2>
+		</div>
+
+		<div class = "first_paragraph">
+
+			<p>  RecycleDtrash places recyclebins all over the city.Our weibsite gives the user information on wehre to find the nearest one, using a map planted with all our bins.</p><!-- Our website provides the public with a map that  -->
+			RecycleDtrash is a website where one can find recycling bins all over jerusalem, planted on a map. One can post public reviews and feedback. By using recycleDtrash you are reducing the accumulating garbage and pollution in our world, making a better living environment for you, your family and for everyone.</p>
+
+		</div>
+		<div class = "second_header">
+			<h2> The problem RecycleDtrash solves.</h2>
+		</div>
+
+
+		<div class = "second_paragraph">
+			<p> polution is becoming a more and more dire problem. As only a small portion of plastic, paper and cardboard are getting recycled. Garbage is slowly coverig our planet, if this phenomenon were to continue, the amount of garbage would be too great to fit on our planet.</p>
+		</div>
+		<div class = "third_header">
+			<h2> Other features</h2>
+		</div>
+		<div class = "third_paragraph">
+			<p> Once you have made an account,you can post public reviews and feedback on our website</p>
+		</div>
+		<div class ="our_team">
+			<h2> OUR TEAM.</h2>
+		</div>
+		<div class = "mission_header">
+			<h2>OUR MISSION</h2>
+		</div>
+
+		<div class = "mission_paragraph">
+			<p>our mission is to reduce the amount of garbage thrown into our environment, by increasing the amount of garbage recycled.</p>
+		</div>
+
+		<div class = "vision_header">
+			<h2> OUR VISION</h2>
+		</div>
+
+		<div class = "vision_paragraph">
+			<p> We vision a cleaner and greener world, where less garbage is thrown into landfills, and more garbage recycled and reused. 
+
+				<div class = "team_paragraph">
+					<p> 
+						<ul>
+
+							<li>NOAM GLOBERMAN </li>
+							<li>EINAV RAVIV</li>
+							<li>GASAN ASHAB</li>
+							<li>SALWA KHALDI</li>
+							<li>IDAN ZAMIR</li>
+						</ul>
+					</p>
+				</div>
+				<div class = "about_team_header">
+					<h2> ABOUT OUR TEAM</h2>
+				</div>
+
+				<div class = "about_team_paragraph">
+					<p> We are a group of year 2 students in the MEET program.For the past Two weeks we have been learning how to make a website and this is the product of our end of the summer project.
+					</center>
+					<!-- Add JQuery and Bootstrap JS to the page -->
+					<!-- JQuery MUST BE BEFORE BOOTSTRAP -->
+					<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+					<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+
+
+
+				</body>
+				</html>
