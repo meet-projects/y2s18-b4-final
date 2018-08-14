@@ -96,7 +96,7 @@ font-family: Comfortaa !important;
 	margin:10px;
 	margin-right:-30%;
 	margin-left:-30%;
-
+	color:black;
   padding:10px;
   margin:10px;
   margin-right:-20%;
@@ -145,9 +145,34 @@ body{
 
 .register{
 	border-radius: 30px;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.7);
 	width: 18%;
 	font-family: Comfortaa;
 	padding:15px;
+	color; black;
+
+}
+
+.logout: hover{
+	color: grey;
+}
+
+.input-group-append{
+	background-color: white;
+	font-family: Comfortaa; 
+	font-size: 16px;
+	color: #2E5E21;
+}
+
+.input-group-append: hover{
+	background-color: #2E5E21;
+	color: white;
+	padding: 10px;
+	font-family: Comfortaa; 
+	font-size: 20px;  
+}
+
+.input-group{
+		font-family: Comfortaa; 
 
 }
