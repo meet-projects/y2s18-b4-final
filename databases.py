@@ -19,7 +19,9 @@ def add_user(user_name, password):
     account = Users(user_name=user_name, password=password)
     session.add(account)
     session.commit()
-
+def get_user_by_name(name):
+	account = session.query(Users).filter_by(user_name = name).first()
+	return account
 def get_all_users():
     users = session.query(Users).all()
     return users
@@ -36,4 +38,9 @@ def add_message(name, msg):
 def get_all_msgs():
 	messages = session.query(Posts).all()
 	return messages
-print(get_all_msgs())
+def delete_all_msgs():
+	session.query(Posts).delete()
+	session.commit()
+def delete_all_users():
+	session.query(Users).delete()
+	session.commit()

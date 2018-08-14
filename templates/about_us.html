@@ -2,23 +2,80 @@
 <html>
 <head>
 	<title>recycleDtrash</title>
-  	<link rel="stylesheet" type="text/css" href="{{url_for('static','style.css')}}">
-	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+  	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+
+	<!-- Required tags to make the website responsive-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Add Bootstrap CSS to the page -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
 
 </head>
 <body>
 
-<div class="fixed">
- <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
-   <button  class="button button1" href="#post">Post Dtrash</button> 
-     <button class="button button1" href="#map">Map Dtrash</button>
-  <button class="button button1" href="#report">Report Dtrash</button>
-  <button  class="button button1" href="#about">About Us</button>
-  <button  class="button button1" href="#contact">Contact Us</button>
+<div class="fixed" style="font-family: Comfortaa; color:black;">
+    <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
+    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+    <a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
+    <a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
+    <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
+    <a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
+    <a> hello {{username}}!   </a>
+    <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
+  </div>
+  
+
+<div id="share-buttons">
+    
+    <!-- Email -->
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+    </a>
+ <br><br>
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
+   <br> <br>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+    </a>
+   <br> <br>
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+    
+    <br><br>
+    <!-- Print -->
+    <a href="javascript:;" onclick="window.print()">
+        <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+    </a>
+    
+
 </div>
 
+<center>
 <div class = "first_header">
-	<h2> About RecycleDtrash.</h2>
+
+	<h2> About Us</h2>
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{url_for('static', filename = '2222.jpg')}}" alt="First slide"  >
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{url_for('static', filename = '4.jpg')}}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{url_for('static', filename = '222.jpg')}}" alt="Third slide">
+    </div>
+  </div>
+</div>
 </div>
 
 <div class="service_header">
@@ -74,7 +131,11 @@
 	</ul>
 	</p>
 </div>
-
+</center>
+ <!-- Add JQuery and Bootstrap JS to the page -->
+<!-- JQuery MUST BE BEFORE BOOTSTRAP -->
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
 
 

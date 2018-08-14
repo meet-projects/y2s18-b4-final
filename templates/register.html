@@ -1,22 +1,77 @@
 
-
-
-
-
 <!DOCTYPE html>
-<head>
-	<title></title>
-</head>
 <body>
-<form action = "/register" method = "post">
-	<input type="text" name="user_name" placeholder="Username">
-	<input type="password" name="password" placeholder="Password">
+
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+
+		<!-- Required tags to make the website responsive-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Add Bootstrap CSS to the page -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='login.css')}}">
+	</head>
+	<body>
+
+		<center>
+			<div class="register">
+
+				<form  action = "/register" method = "post" style = "color:black">
+					<div>
+						<img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" >
+						<br>
+						<font color="black"><label>Email Adress</label></font>
+						<input type="email" class="form-control" name="email" placeholder="Enter email">
+						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					</div>
+					<div>
+						<font color="black"><label>User name</label></font>
+						<input type="text" class="form-control"  name="user_name" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<font color="black"><label>Password</label></font>
+						<input type="password" class="form-control" name="password" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<font color="black"><label>Conirm password</label></font>
+						<input type="password" class="form-control" name="password-confirm" placeholder="Password">
+					</div>
+					<div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+					</div>
+					<button onclick="document.getElementById('id01').style.display='block'"type="submit" class="btn btn-primary">Register</button>
+					<a class="dropdown-item" href="{{url_for('login')}}">Already have an account? Log in!</a>
+				</div>
+
+			</form>
+		</center>
+<!-- 
+  <form action = "/register" method = "post" style = "color:black">
+	<center>
+	 <label for="username"><b>username</b></label>
+	 <br>
+	<input type="text" name="user_name" placeholder="">
 	<br>
-	<input type="submit" value="submit">
+	<br>
+	<label for="password"><b>Password</b></label>
+	<br>
+	<input type="password" name="password" placeholder="">
+	<br>
+	<br>
+	<button onclick="document.getElementById('id01').style.display='block'">register</button>
+	</center>
+	<center>
+	</center> -->
 
 
 </form>
-
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
 </body>
-</html>>
+</html>
