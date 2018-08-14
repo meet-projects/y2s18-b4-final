@@ -122,7 +122,12 @@ def report():
         return render_template('report.html', username = username)
     else:
         return render_template('login.html')
+@app.route('/profile/<string:username>')
+def index(username): 
+	return render_template('profile.html',username=username)
+
 
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
+
