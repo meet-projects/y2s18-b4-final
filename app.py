@@ -1,7 +1,7 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, session
 # Add functions you need from databases.py to the next line!
-from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users
+from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users, add_contact, add_pos
 from model import *
 # Starting the flask app
 app = Flask(__name__)
@@ -123,9 +123,9 @@ def report():
         if request.method == 'GET':
             return render_template('report.html', username = username)
         else:
-            name = form.request['location_name']
-            longi = form.request['longitude']
-            lat = form.request['latitude']
+            name = request.form['location_name']
+            longi = request.form['longitude']
+            lat = request.form['latitude']
             add_pos(name,longi,lat)
             return render_template('report.html', username = username)
     else:
