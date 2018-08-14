@@ -41,3 +41,7 @@ class Position(Base):
     name = Column(String)
     longitude = Column(Float)
     latitude = Column(Float)
+
+    def __repr__(self):
+        return ("name: {}\n, longi: {}\n, lati: {}\n\n".format(self.name, self.longitude, self.latitude))
+

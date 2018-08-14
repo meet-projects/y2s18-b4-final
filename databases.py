@@ -55,4 +55,8 @@ def add_pos(name, longi, lat):
 	pos = Position(name = name, longitude = longi, latitude = lat)
 	session.add(pos)
 	session.commit()
-print(query_contacts())
+def query_pos():
+	return session.query(Position).all()
+def delete_all_pos():
+	session.query(Position).delete()
+	session.commit()
