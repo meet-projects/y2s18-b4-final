@@ -22,3 +22,15 @@ class Posts(Base):
 	id = Column(Integer, primary_key = True)
 	user_name = Column(String)
 	message = Column(String)
+class Contacts(Base):
+    __tablename__ = "contacts"
+    id = Column(Integer, primary_key = True)
+    first_name = Column(String)
+    second_name = Column(String)
+    city = Column(String)
+    subject = Column(String)
+    message = Column(String)
+
+
+    def __repr__(self):
+        return ("First Name: {}, Last name: {}, City: {}, Subject: {}, Message: {}".format(self.first_name, self.second_name, self.city, self.subject, self.message))

@@ -84,7 +84,15 @@ def login():
 def about_us():
     if 'user_name' in session:
         username = session['user_name']
-        return render_template('about_us.html', username = username)
+        if request.method == 'GET':
+            return render_template('about_us.html', username = username)
+        else:
+            first_name = request.form['firstname']
+            second_name = request.form['lastname']
+            city = request.form['city']
+            subject = request.form['subject']
+            message = request.form['message']
+            add_contact(first_name,second_name,city,subject,message)
     else:
         return render_template('login.html')
 
