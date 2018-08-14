@@ -74,6 +74,8 @@ body {
 
 }
 h1 {
+
+
 	position: fixed;
 	top: 21%;
 }
@@ -123,8 +125,11 @@ body{
 }
 
 .loginform {
-	width: 20%;
-	font-family: Comfortaa; 
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	width: 18%;
+	font-family: Comfortaa;
+	padding:15px;
 
 }
 
@@ -136,4 +141,13 @@ body{
     border-style: solid;
     border-width: 10px;
     border-color: #e2c65f;
+}
+
+.register{
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	width: 18%;
+	font-family: Comfortaa;
+	padding:15px;
+
 }
