@@ -7,6 +7,34 @@
   <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 </head>
 <body>
+  <div id="share-buttons">
+
+    <!-- Email -->
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+      <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+    </a>
+    <br><br>
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+      <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
+    <br> <br>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+      <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+    </a>
+    <br> <br>
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+      <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+    <br><br>
+    <!-- Print -->
+    <a href="javascript:;" onclick="window.print()">
+      <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+    </a>
+
+  </div>
 <div class="fixed" style="font-family: Comfortaa; color:black;">
     <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
     <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
@@ -15,15 +43,9 @@
     <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
     <a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
     <a> hello {{username}}!   </a>
-    <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
+    <a class="logout" id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
   </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1 style="background-color: ; text-align: center;" > Welcome </h1>
+
 <center>
 <!-- 
 
@@ -44,10 +66,14 @@
     <input type="submit" class="btn btn-outline-success" value="Submit">
   </form> -->
 
-
-  <p>Click the button to add your coordinates.</p>
-  <p id="demo"></p>
-
+<div class="reporting">
+  <p style="background-color: ; text-align: center; font-family: comfortaa; font-size: 48px;     text-shadow: 2px 2px 4px #000000;
+">Report Dtrash.</p>
+<p style="background-color: ; text-align: center; font-family: comfortaa; font-size: 18px;     text-shadow: 2px 2px 4px #000000;
+">Found a trash bin that is not reported?</p>
+  <p style="background-color: ; text-align: center; font-family: comfortaa; font-size: 30px;     text-shadow: 2px 2px 4px #000000;
+">Click the button to add your own coordinates.</p>
+  
   <script>
   var x = document.getElementById("demo");
 
@@ -68,9 +94,18 @@
 
   </script>
 
-  <button onclick="getLocation()">Add your location!</button>
+  <button class="btn btn-primary registerin registerin1" onclick="getLocation()">Add your exact location</button>
   <br><br>
   <form action='/report' method="post">
+<<<<<<< HEAD
+    <input type="text" class="form-control"  name="location_name" placeholder="Full Name">
+    <br>
+    <input id="long" type="text" class="form-control"  name="longitude" placeholder="Longitude">
+    <br>
+    <input id = "lati" type="text" class="form-control"  name="latitude" placeholder="Latitude">
+    <br>
+    <input type="submit" class="btn btn-primary registerin registerin1" value="Submit">
+=======
     <input type="text" name="location_name" placeholder="name of place">
     <br><br>
     <input id="long" type="text" name="longitude" placeholder="longitude">
@@ -78,8 +113,13 @@
     <input id = "lati" type="text" name="latitude" placeholder="latitude">
     <br><br>
     <input type="submit" value="Submit">
+>>>>>>> 6f9e5550296a2af35036617045a1441ab713b21d
     </form>
+  </div>
 </center>
+
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
 
 </body>
