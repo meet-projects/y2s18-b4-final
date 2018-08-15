@@ -67,20 +67,13 @@ body {
 .posts{
 
 	position:absolute;
-	top:36%;
+	top:71%;
 	text-align: center;
-	right:42%;
 	overflow: auto;
 	height:80%;
 	font-family: comfortaa;
 
 
-}
-h1 {
-
-
-	position: fixed;
-	top: 21%;
 }
 
 h2{
@@ -120,6 +113,7 @@ a:visited{
 .posting{
 	position:fixed;
 	z-index:1000;
+	background-color: white;
 }
 body{
 	color:white;
@@ -158,10 +152,11 @@ body{
 }
 
 .logout:hover{
-	color: grey;
+	color: grey !important;
 }
 
 .input-group-append{
+
 	background-color: white;
 	font-family: Comfortaa; 
 	font-size: 16px;
@@ -205,6 +200,7 @@ body{
 			width:100vw;
 			height:90%;
 		}
+
 .aboutus{
 	display: inline;
     position: absolute;
