@@ -12,7 +12,14 @@
 
 	<!-- Add Bootstrap CSS to the page -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+	<style>
 
+	body{
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	</style>
 </head>
 <body>
 
@@ -100,26 +107,14 @@
 		<br>
 		<br>
 		<div class="row" style="margin-top: 20%">
-			<div class="column">
-    <div class="card">
-      <img src="{{url_for('static', filename = 'download.gif')}}" alt="salwa" style="width:50%">
-      <div class="container">
-        <h2>Salwa Khaldi</h2>
-        <p class="title">frontend developer</p>
-        <p>Nationality: Palastinian</p>
-        <p>Nazareth</p>
-        <p>E-mail: salwakhaldi111@gmail.com</p>
-        <p>Phone: 050-276-6222 </p>
-      </div>
-    </div>
-  </div>
+	
  
   <div class="column">
     <div class="card">
-      <img src="{{url_for('static', filename = 'download.gif')}}" alt="einav" style="width:50%">
+      <img src="{{url_for('static', filename = 'einav.jpg')}}" alt="einav" style="width:200px;">
       <div class="container">
         <h2>Einav Raviv</h2>
-        <p class="title">Designer & frontend developer</p>
+        <p class="title">Designing manager & frontend developer</p>
         <p>Nationality: Israeli</p>
         <p>jerusalem</p>
         <p>E-mail: einavraviv1@gmail.com</p>
@@ -130,7 +125,20 @@
   </div>
   <div class="column">
     <div class="card">
-      <img src="{{url_for('static', filename = 'download.gif')}}" alt="idan" style="width:50%">
+      <img src="{{url_for('static', filename = 'noam.jpg')}}" alt="noam" style="width:220px;height:300px;">
+      <div class="container">
+        <h2>Noam Globerman</h2>
+        <p class="title">backend developer</p>
+        <p>Nationality: Israeli</p>
+        <p>Jerusalem </p>
+        <p>E-mail: noamg.j2@gmail.com</p>
+        <p>Phone: 050-373-0945 </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename = 'idan.jpg')}}" alt="idan" style="width:50%">
       <div class="container">
         <h2>Idan Zamir</h2>
         <p class="title">fullstack developer</p>
@@ -143,26 +151,27 @@
     </div>
   </div>
 </div>
+
+</div>
 <div class="column">
     <div class="card">
-      <img src="{{url_for('static', filename = 'download.gif')}}" alt="noam" style="width:50%">
+      <img src="{{url_for('static', filename = 'salwa.jpg')}}" alt="salwa" style="width:50%">
       <div class="container">
-        <h2>Noam Globerman</h2>
-        <p class="title">backend developer</p>
-        <p>Nationality: Israeli</p>
-        <p>Jerusalem </p>
-        <p>E-mail: noamg.j2@gmail.com</p>
-        <p>Phone: 050-373-0945 </p>
+        <h2>Salwa Khaldi</h2>
+        <p class="title">frontend developer</p>
+        <p>Nationality: Palastinian</p>
+        <p>Nazareth</p>
+        <p>E-mail: salwakhaldi111@gmail.com</p>
+        <p>Phone: 050-276-6222 </p>
       </div>
     </div>
   </div>
-</div>
 <div class="column" >
     <div class="card">
-      <img src="{{url_for('static', filename = 'download.gif')}}" alt="gasan" style="width:50%">
+      <img src="{{url_for('static', filename = 'gasan.jpg')}}" alt="gasan" style="width:50%">
       <div class="container">
         <h2>Gasan Ashhab</h2>
-        <p class="title">content manager + frontend developer</p>
+        <p class="title">Content manager + frontend developer</p>
         <p>Nationality: canadian</p>
         <p>Jerusalem</p>
         <p> E-mail: gasanashhab@gmail.com</p>

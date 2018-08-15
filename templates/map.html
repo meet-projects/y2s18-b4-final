@@ -80,9 +80,10 @@
 	    // add popup to the marker
 	    //marker.bindPopup("<b>ACME CO.</b><br />This st. 48<br />New York").openPopup()
 	    var markerList = {{marker_list}};
+	    var nameList = {{name_list|safe}};
 	    for (var i=0; i<markerList.length; i++){
 	    	marker = L.marker(markerList[i]).addTo(map);
-	    	marker.bindPopup("<b>ACME CO.</b><br />This st. 48<br />New York").openPopup()
+	    	marker.bindPopup(nameList[i]).openPopup();
 	    }
 	  </script>
 
