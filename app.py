@@ -64,9 +64,13 @@ def register():
     else:
         accounts = get_all_users()
         is_open = True
+        is_used = True
         for account in accounts:
             if request.form['user_name'] == account.user_name:
                 is_open = False
+        for account in accounts:
+            if request.form['email'] == account.email:
+                is_used = False
         if is_open == True:
             password = request.form['password']
             confirm = request.form['password-confirm']
@@ -79,8 +83,7 @@ def register():
 
             if password == confirm:
                 mail.send(msg)
-                add_user(request.form['user_name'],
-                    request.form['password'])
+                add_user(username, password, email)
                 return redirect(url_for('login'))
             else:
                 return redirect(url_for('register'))
