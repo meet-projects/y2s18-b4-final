@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="download.png" alt="salwa" style="width:50%">
+      <div class="container">
+        <h2>Salwa Khaldi</h2>
+        <p class="title">Designer</p>
+        <p>Nationality: Palastinian</p>
+        <p>Nazareth</p>
+        <p>salwa19@meet.mit.edu</p>
+        <p>Phone: 050-276-6222 </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="download.png" alt="einav" style="width:50%">
+      <div class="container">
+        <h2>Einav Raviv</h2>
+        <p class="title">Designer</p>
+        <p>Nationality: Israeli</p>
+        <p>jerusalem</p>
+        <p>einav19@meet.mit.edu</p>
+        <p>Phone: 050-229-9603 </p>
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="download.png" alt="idan" style="width:50%">
+      <div class="container">
+        <h2>Idan Zamir</h2>
+        <p class="title">Designer</p>
+        <p>Nationality: Israeli</p>
+        <p>Nazareth</p>
+        <p>idanz19@meet.mit.edu</p>
+        <p>Phone: 055-885-4017 </p>
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="download.png" alt="noam" style="width:50%">
+      <div class="container">
+        <h2>Noam Globerman</h2>
+        <p class="title">Designer</p>
+        <p>Nationality: Israeli</p>
+        <p>Jerusalem </p>
+        <p>E-mail: noamga19@meet.mit.edu</p>
+        <p>Phone: 050-373-0945 </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="download.png" alt="gasan" style="width:50%">
+      <div class="container">
+        <h2>Gasan Ashhab</h2>
+        <p class="title">Designer</p>
+        <p>Nationality: canadian</p>
+        <p>Jerusalem</p>
+        <p> E-mail: gasan19@meet.mit.edu</p>
+        <p> Phone: 058-589-9006 </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
