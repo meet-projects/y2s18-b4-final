@@ -172,9 +172,6 @@ def report():
     else:
         return render_template('login.html')
 
-# @app.route('/profile/<string:username>')
-# def index(username): 
-# 	return render_template('profile.html',username=username)
 
 @app.route('/profile')
 def profile():
