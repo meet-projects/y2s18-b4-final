@@ -64,13 +64,9 @@ def register():
     else:
         accounts = get_all_users()
         is_open = True
-        is_used = True
         for account in accounts:
             if request.form['user_name'] == account.user_name:
                 is_open = False
-        for account in accounts:
-            if request.form['email'] == account.email:
-                is_used = False
         if is_open == True:
             password = request.form['password']
             confirm = request.form['password-confirm']
@@ -83,7 +79,8 @@ def register():
 
             if password == confirm:
                 mail.send(msg)
-                add_user(username, password, email)
+                add_user(request.form['user_name'],
+                    request.form['password'])
                 return redirect(url_for('login'))
             else:
                 return redirect(url_for('register'))
@@ -150,11 +147,12 @@ def map():
         username = login_session['user_name']
         points = session.query(Position).all()
         marker_list = []
+        name_list = []
         for point in points:
             marker_list.append([point.latitude, point.longitude])
+            name_list.append(point.name)
 
-
-        return render_template('map.html', username = username, marker_list=marker_list)
+        return render_template('map.html', username = username, marker_list=marker_list, name_list=name_list)
     else:
         return render_template('login.html')
 @app.route('/report', methods=['GET','POST'])
@@ -169,12 +167,13 @@ def report():
             longi = float(request.form['longitude'])
             lat = float(request.form['latitude'])
             add_pos(name,longi,lat)
-            return redirect(url_for('map'))
+            return render_template('report.html', username = username)
     else:
         return render_template('login.html')
-@app.route('/our_team')
-def our_team():
-    return render_template('ourteam.html')
+@app.route('/profile/<string:username>')
+def index(username): 
+	return render_template('profile.html',username=username)
+
 
 # Running the Flask app
 if __name__ == "__main__":
