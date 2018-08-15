@@ -18,7 +18,6 @@
 		left:0%;
 	}
 	#post{
-		border:1px solid black;
 	}
 
 </style>
@@ -75,11 +74,12 @@
 		<div class="justify-center">
 			
 			<div class="reporting" style="width: 27%; height: 100%; margin-top: -150px">
-<h1 style="text-align: center; font-family: comfortaa; font-size: 48px;     text-shadow: 2px 2px 4px #000000;">Post Dtrash</h1>
+<h1 style="text-align: center; font-family: comfortaa; font-size: 48px;     text-shadow: 2px 2px 4px #000000;">Post Dtrash.</h1>
 <h3 style="text-align: center; font-family: comfortaa; font-size: 20px;     text-shadow: 2px 2px 4px #000000; padding: 10px; "> Hi {{username}}, share your recycled trash with our community. And your feelings if you would like to.</h3>
 			<form action = "/home" method = "post">
-					<input type="text" class="form-control"  name="message" placeholder="Enter your post here" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px; ">
-					<br>
+					<textarea id="message" class="form-control" name="message" placeholder="Enter your post here" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px; "></textarea>
+<!-- 					<input type="text" class="form-control"  name="message" placeholder="Enter your post here" >
+ -->					<br>
 					<input type="text" class="form-control"  name="image" placeholder="Post image link" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;">
 					<br>
 
