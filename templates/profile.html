@@ -27,13 +27,15 @@ body{
 }
 
 .p_post{
-	position:absolute;
-	top:40%;
+	
 	text-align:center;	
 	border:1px solid black;
 	padding:15px 10px;
 }
-
+.p_posts{
+	position:absolute;
+	top:40%;
+}
 
 .home_button{
 	position:absolute;
@@ -67,19 +69,21 @@ body{
 		{{post.message}}
 		</span>
 		<br>
-		<img src = "{{post.image}}" width = "350">	
-	</div>
+		<img src = "{{post.image}}" width = "350">
+
 	</div>
 
 
 	<br>
 
 	{%endfor%}
+</div>
+
 	<br>
 
 </div>
 <div class = "home_button">
-	<a href="{{ url_for('home') }}"> home page</a>
+	<a href="{{ url_for('home') }}" style = "position:fixed; top:0%;"> home page</a>
 </div>
 </body>
 
