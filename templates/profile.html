@@ -21,7 +21,7 @@ h2{
 	width:50%;
 }
 body{
-	background-image:url("APRIL.jpg");
+	background-image:url("{{url_for('static',filename='APRIL.jpg')}}");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -47,11 +47,18 @@ body{
 <div class = "your comments">
 
 	<h2>your posted reviews:</h2>
+	{%for post in post%}
 
+
+	<span>message: {{post.message}}</span>
+
+
+	{%endfor%}
+	<br>
 
 </div>
 
-<a href="">back to home page</a>
+<a href="{{ url_for('home') }}">back to home page</a>
 </body>
 
 
