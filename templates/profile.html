@@ -21,22 +21,20 @@ h2{
 	width:50%;
 }
 body{
-	background-image:url("{{url_for('static',filename='APRIL.jpg')}}");
+	background-image:url("{{url_for('static',filename='')}}");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.for_span{
+.p_post{
 	position:absolute;
 	top:40%;
-	width:200;
-	
+	text-align:center;	
+	border:1px solid black;
+	padding:15px 10px;
 }
-.another_span{
-	position:absolute;
-	top:45%;
-	width:200;
-}
+
+
 .home_button{
 	position:absolute;
 	top:5%;
@@ -58,13 +56,20 @@ body{
 <div class = "your comments">
 
 	<h2>your posted reviews:</h2>
+	<div class = "p_posts">
 	{%for post in posts%}
 
 
-	<div class="for_span">
-		<span>message: {{post.message}}</span>	
+	<div class="p_post">
+		<span>
+		<bold>your comment:</bold>
+		<br>
+		{{post.message}}
+		</span>
+		<br>
+		<img src = "{{post.image}}" width = "350">	
 	</div>
-
+	</div>
 
 
 	<br>
