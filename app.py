@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, session as login_session
 from flask_mail import Mail, Message
 # Add functions you need from databases.py to the next line!
-from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users, add_contact, add_pos, session
+from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users, add_contact, add_pos, session, get_all_msgs_name
 from model import *
 # Starting the flask app
 app = Flask(__name__)
@@ -172,9 +172,19 @@ def report():
             return redirect(url_for('map'))
     else:
         return render_template('login.html')
-@app.route('/our_team')
-def our_team():
-    return render_template('ourteam.html')
+@app.route('/profile')
+def profile():
+    if 'user_name' in login_session:
+        username = login_session['user_name']
+        posts = get_all_msgs_name(username)
+        return render_template("profile.html",
+            username=username,
+            posts = posts
+            )
+    else:
+        return redirect(url_for('login'))
+
+
 
 # Running the Flask app
 if __name__ == "__main__":
