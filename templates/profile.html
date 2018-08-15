@@ -26,6 +26,14 @@ body{
 	background-size: cover;
 }
 
+.for_span{
+	position:absolute;
+	top:35%;
+	width:50;
+	
+}
+
+
 
 
 </style>
@@ -49,9 +57,16 @@ body{
 	<h2>your posted reviews:</h2>
 	{%for post in posts%}
 
+<<<<<<< HEAD
+	<div class="for_span">
+		<span>message: {{post.message}}</span>	
+	</div>
+
+=======
 
 	<span>your comment: {{post.message}}</span>
 	<br>
+>>>>>>> 1adfb662ba1100e3f5626c2d9c171dd37f259a55
 
 	{%endfor%}
 	<br>
