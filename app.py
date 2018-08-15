@@ -172,10 +172,9 @@ def report():
             return redirect(url_for('map'))
     else:
         return render_template('login.html')
-@app.route('/profile/<string:username>')
-def index(username): 
-	return render_template('profile.html',username=username)
-
+@app.route('/our_team')
+def our_team():
+    return render_template('ourteam.html')
 
 # Running the Flask app
 if __name__ == "__main__":
