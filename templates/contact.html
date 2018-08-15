@@ -7,63 +7,60 @@
 
 </head>
 <body>
-<h1 style="background-color: ; text-align: center;" > CONTACT US </h1>
-<div class="fixed" style="font-family: Comfortaa; color:black;">
+  <h1 style="background-color: ; text-align: center;" > CONTACT US </h1>
+  <div class="fixed" style="font-family: Comfortaa; color:black;">
     <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
     <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
     <a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
     <a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
     <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
     <a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
-    <a> hello {{username}}!   </a>
-    <a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
+    <a> Hello {{username}}!   </a>
+    <a class="logout" id="logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
   </div>
-<CENTER>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <form action="/contact" method="post">
-  	<label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  <CENTER>
+    <br>
     <br>
     <br>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    <br>
-    <br>
-    <label for="city">City</label>
-    <select id="city" name="city">
-      <option value="nazareth">nazareth</option>
-      <option value="jerusalem">jerusalem</option>
-      <option value="tel aviv">tel aviv</option>
-      <option value="haifa">haifa</option>
+    <div class="container">
+      <h1 style="text-align: center; font-family: comfortaa; font-size: 48px; color:white; text-shadow: 2px 2px 4px #000000;">Contact Us.</h1>
+      <form action="/contact" method="post">
+       <label for="fname">First Name</label>
+       <input type="text" class="form-control" id="fname" name="firstname" placeholder="Name">
 
+       <br>
 
+       <label for="lname">Last Name</label>
+       <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last Name">
+       <br>
 
-    </select>
-    <br>
-    <br>
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" placeholder="....">
-    <br>
-    <br>
+       <label for="city">City</label>
+        <input type="text" class="form-control" id="city" name="city" placeholder="City">
 
-  
-   
-    <label for="message">message</label>
-    <textarea id="message" name="message" placeholder="Write something.." style="height:20px"></textarea>
-    <br>
-    <br>
+     <!--   <select class="form-control" id="city" name="city">
+        <option value="nazareth">nazareth</option>
+        <option value="jerusalem">jerusalem</option>
+        <option value="tel aviv">tel aviv</option>
+        <option value="haifa">haifa</option> -->
 
-    <input type="submit" class="btn btn-outline-success" value="Submit">
-</center>
+      </select>
+      <br>
+      <label for="subject" >Subject</label>
+      <br>
+      <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+      <br>
 
-    </form>
+      <label for="message">Message</label>
+      <br>
+      <textarea id="message" class="form-control" name="message" placeholder="Write something" style="height:100px"></textarea>
+      <br>
+
+      <input type="submit" class="btn btn btn-primary registerin registerin1" value="Submit">
+    </center>
+
+  </form>
+
 </div>
 
 <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
