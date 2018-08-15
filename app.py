@@ -80,7 +80,8 @@ def register():
             if password == confirm:
                 mail.send(msg)
                 add_user(request.form['user_name'],
-                    request.form['password'])
+                    request.form['password'],
+                    request.form['email'])
                 return redirect(url_for('login'))
             else:
                 return redirect(url_for('register'))
@@ -167,7 +168,7 @@ def report():
             longi = float(request.form['longitude'])
             lat = float(request.form['latitude'])
             add_pos(name,longi,lat)
-            return render_template('report.html', username = username)
+            return redirect(url_for('map'))
     else:
         return render_template('login.html')
 
