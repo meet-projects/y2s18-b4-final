@@ -8,19 +8,19 @@
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 	<style>
 
-		.posts::-webkit-scrollbar { 
-    	display: none; 
-		}
-		.posts{
-			width:100vw;
-			overflow-x:none;
-			position:absolute;
-			left:0%;
-		}
-		#post{
-			border:1px solid black;
-		}
-		
+	.posts::-webkit-scrollbar { 
+		display: none; 
+	}
+	.posts{
+		width:100vw;
+		overflow-x:none;
+		position:absolute;
+		left:0%;
+	}
+	#post{
+		border:1px solid black;
+	}
+
 </style>
 
 </head>
@@ -62,46 +62,50 @@
 		<a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
 		<a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
 		<a>hello {{username}}!   </a>
-		<a class= "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">log out</a>
+		<a class= "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
 	</div>
 	
 
 
-<center>
-	<br>
-	<br>
-	<br>
-	<div class = "posting"style="position:fixed;top:17%;left:44%;">
-
-		<form action = "/home" method = "post">
-			<div class="input-group mb-3">
-				<input type="text" class="form-control"  name="message" placeholder="Enter your post here" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;margin-left:-30%;margin-right:30%;">
-
-				<input type="text" class="form-control"  name="image" placeholder="Post image link" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;margin-left:-30%;margin-right:20%;position:absolute;top:100%;">
-				<div class="input-group-append postbutton1 postbutton">
+	<center>
+		<br>
+		<br>
+		<br>
+		<div> 
+		<div class="justify-center">
+			
+			<div class="reporting" style="width: 27%; height: 100%; margin-top: -150px">
+<h1 style="text-align: center; font-family: comfortaa; font-size: 48px;     text-shadow: 2px 2px 4px #000000;">Post Dtrash</h1>
+<h3 style="text-align: center; font-family: comfortaa; font-size: 20px;     text-shadow: 2px 2px 4px #000000; padding: 10px; "> Hi {{username}}, share your recycled trash with our community. And your feelings if you would like to.</h3>
+			<form action = "/home" method = "post">
+					<input type="text" class="form-control"  name="message" placeholder="Enter your post here" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px; ">
 					<br>
-					<button class="btn btn-outline-secondary postbutton1 postbutton" type="submit" id="button-addon2"style = "position:fixed; top: 29%; right:46%;">Post</button>
-				</div>
+					<input type="text" class="form-control"  name="image" placeholder="Post image link" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;">
+					<br>
+
+						<button class= "btn btn-primary registerin registerin1" type="submit" id="button-addon2">Post</button>
+
+			</form>
 			</div>
 
-		</form>
-
-	</div>
 
 
-	<div class = "posts">
-		{%for post in posts%}
-		<div id = "post">
-			<span><p align=left><b>{{post.user_name}}:</b></p>
-				{{post.message}}
-				<br>
-				<img src = "{{post.image}}" width = "450" />
-			</span>
-			<br>
 		</div>
-
-		{%endfor%}
 	</div>
-</center>
+
+		<div class = "posts">
+			{%for post in posts%}
+			<div id = "post">
+				<span><p align=left style="font-size: 18px;"><b>{{post.user_name}} :</b></p>
+					{{post.message}}
+					<br>
+					<img src = "{{post.image}}" width = "450" />
+				</span>
+				<br>
+			</div>
+
+			{%endfor%}
+		</div>
+	</center>
 </body>
 </html>
