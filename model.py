@@ -13,10 +13,11 @@ class Users(Base):
     id = Column(Integer, primary_key = True)
     user_name = Column(String)
     password = Column(String)
+    email = Column(String)
 
 
     def __repr__(self):
-        return ("User Name: {}, Password: {}".format(self.user_name, self.password))
+        return ("User Name: {}, Password: {}, Email: {}".format(self.user_name, self.password, self.email))
 class Posts(Base):
     __tablename__ = "messages"
     id = Column(Integer, primary_key = True)

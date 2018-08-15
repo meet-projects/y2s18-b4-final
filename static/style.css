@@ -8,7 +8,7 @@
 
 
 body {
-	background-image: url("3.jpg");
+	background-image: url("map.jpg");
 	overflow-x: hidden;
 	background-color: #cccccc;
 }
@@ -72,6 +72,8 @@ body {
 	right:42%;
 	overflow: auto;
 	height:80%;
+	font-family: comfortaa;
+
 
 }
 h1 {
@@ -95,14 +97,15 @@ font-family: Comfortaa !important;
 	border-top:1px solid black;
 	padding:10px;
 	margin:10px;
-	margin-right:-30%;
-	margin-left:-30%;
+	
 	color:black;
   padding:10px;
   margin:10px;
-  margin-right:-20%;
-  margin-left:-20%;
-  	background-color: rgba(255,255,255, 0.5);
+  width:70%;
+  margin-left: 15%;
+  	background-color: rgba(255,255,255, 0.7);
+  	    border-radius: 30px;
+
 
 }
 a{
@@ -183,12 +186,16 @@ body{
 
 .registerin{
 		background-color: #2E5E21;
+		border-color: #2E5E21;
+			transition-duration: 0.4s;
+
 
 }
 
 .registerin1:hover{
-		background-color: #2E5E21;
-
+		background-color: white;
+		color:  black;
+		border-color: black;
 }
 
 #map{
@@ -206,4 +213,16 @@ body{
     left: 40%;
     font-family: Comfortaa;
 
+
+}
+
+.reporting{
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.7);
+	width: 20%;
+	font-family: Comfortaa;
+	padding:12px;
+	margin-top: -95px;
+	position: relative;
+	height: 80%;
 }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename = 'download.gif')}}" alt="salwa" style="width:50%">
+      <div class="container">
+        <h2>Salwa Khaldi</h2>
+        <p class="title">frontend developer</p>
+        <p>Nationality: Palastinian</p>
+        <p>Nazareth</p>
+        <p>E-mail: salwakhaldi111@gmail.com</p>
+        <p>Phone: 050-276-6222 </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename = 'download.gif')}}" alt="einav" style="width:50%">
+      <div class="container">
+        <h2>Einav Raviv</h2>
+        <p class="title">Designer & frontend developer</p>
+        <p>Nationality: Israeli</p>
+        <p>jerusalem</p>
+        <p>E-mail: einavraviv1@gmail.com</p>
+        <p>Phone: 050-229-9603 </p>
+
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename = 'download.gif')}}" alt="idan" style="width:50%">
+      <div class="container">
+        <h2>Idan Zamir</h2>
+        <p class="title">fullstack developer</p>
+        <p>Nationality: Israeli</p>
+        <p>Nazareth</p>
+        <p>E-mail: idanzamir2002@gmail.com</p>
+        <p>Phone: 055-885-4017 </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename = 'download.gif')}}" alt="noam" style="width:50%">
+      <div class="container">
+        <h2>Noam Globerman</h2>
+        <p class="title">backend developer</p>
+        <p>Nationality: Israeli</p>
+        <p>Jerusalem </p>
+        <p>E-mail: noamg.j2@gmail.com</p>
+        <p>Phone: 050-373-0945 </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename = 'download.gif')}}" alt="gasan" style="width:50%">
+      <div class="container">
+        <h2>Gasan Ashhab</h2>
+        <p class="title">content manager + frontend developer</p>
+        <p>Nationality: canadian</p>
+        <p>Jerusalem</p>
+        <p> E-mail: gasanashhab@gmail.com</p>
+        <p> Phone: 058-589-9006 </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<div class="service_header">
+      <h2> OUR SERVICE</h2>
+    </div>
+
+    <div class = "first_paragraph">
+
+      <p>  RecycleDtrash places recyclebins all over the city.Our weibsite gives the user information on wehre to find the nearest one, using a map planted with all our bins.</p><!-- Our website provides the public with a map that  -->
+      RecycleDtrash is a website where one can find recycling bins all over jerusalem, planted on a map. One can post public reviews and feedback. By using recycleDtrash you are reducing the accumulating garbage and pollution in our world, making a better living environment for you, your family and for everyone.</p>
+
+    </div>
+    <div class = "second_header">
+      <h2> The problem RecycleDtrash solves.</h2>
+    </div>
+
+
+    <div class = "second_paragraph">
+      <p> polution is becoming a more and more dire problem. As only a small portion of plastic, paper and cardboard are getting recycled. Garbage is slowly coverig our planet, if this phenomenon were to continue, the amount of garbage would be too great to fit on our planet.</p>
+    </div>
+    <div class = "third_header">
+      <h2> Other features</h2>
+    </div>
+    <div class = "third_paragraph">
+      <p> Once you have made an account,you can post public reviews and feedback on our website</p>
+    </div>
+    <div class ="our_team">
+      <h2> OUR TEAM.</h2>
+    </div>
+    <div class = "mission_header">
+      <h2>OUR MISSION</h2>
+    </div>
+
+    <div class = "mission_paragraph">
+      <p>our mission is to reduce the amount of garbage thrown into our environment, by increasing the amount of garbage recycled.</p>
+    </div>
+
+    <div class = "vision_header">
+      <h2> OUR VISION</h2>
+    </div>
+
+    <div class = "vision_paragraph">
+      <p> We vision a cleaner and greener world, where less garbage is thrown into landfills, and more garbage recycled and reused. 
+
+        <div class = "team_paragraph">
+          <p> 
+            <ul>
+
+              <li>NOAM GLOBERMAN </li>
+              <li>EINAV RAVIV</li>
+              <li>GASAN ASHAB</li>
+              <li>SALWA KHALDI</li>
+              <li>IDAN ZAMIR</li>
+            </ul>
+          </p>
+        </div>
+        <div class = "about_team_header">
+          <h2> ABOUT OUR TEAM</h2>
+        </div>
+
+        <div class = "about_team_paragraph">
+          <p> We are a group of year 2 students in the MEET program.For the past Two weeks we have been learning how to make a website and this is the product of our end of the summer project.
+          </center>

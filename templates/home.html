@@ -75,11 +75,12 @@
 
 		<form action = "/home" method = "post">
 			<div class="input-group mb-3">
-				<input type="text" class="form-control"  name="message" placeholder="Enter your post here" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;margin-left:-40%;margin-right:20%;">
-				<input type="text" class="form-control"  name="image" placeholder="Enter your image's link here :)" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;margin-left:-40%;margin-right:20%;position:absolute;top:100%;">
+				<input type="text" class="form-control"  name="message" placeholder="Enter your post here" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;margin-left:-30%;margin-right:30%;">
+
+				<input type="text" class="form-control"  name="image" placeholder="Post image link" aria-label="Recipient's username" aria-describedby="button-addon2" style = "width: 500px;margin-left:-30%;margin-right:20%;position:absolute;top:100%;">
 				<div class="input-group-append postbutton1 postbutton">
 					<br>
-					<button class="btn btn-outline-secondary postbutton1 postbutton" type="submit" id="button-addon2"style = "position:fixed; top: 29%; right:48%;">Post</button>
+					<button class="btn btn-outline-secondary postbutton1 postbutton" type="submit" id="button-addon2"style = "position:fixed; top: 29%; right:46%;">Post</button>
 				</div>
 			</div>
 
@@ -91,8 +92,7 @@
 	<div class = "posts">
 		{%for post in posts%}
 		<div id = "post">
-			<span>{{post.user_name}}: 
-			
+			<span><p align=left><b>{{post.user_name}}:</b></p>
 				{{post.message}}
 				<br>
 				<img src = "{{post.image}}" width = "450" />
