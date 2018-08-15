@@ -1,0 +1,4 @@
+userlike.userlikeCallbackButtonCheck({
+    "in_service_time": true,
+    "message": "GROUP_OFFLINE"
+})
