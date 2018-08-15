@@ -1,11 +1,25 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, session
+from flask_mail import Mail, Message
 # Add functions you need from databases.py to the next line!
 from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users, add_contact, add_pos
 from model import *
 # Starting the flask app
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'asdf movies'
+
+app.config.update(dict(
+    DEBUG = True,
+    MAIL_SERVER = 'smtp.gmail.com',
+    MAIL_PORT = 587,
+    MAIL_USE_TLS = True,
+    MAIL_USE_SSL = False,
+    MAIL_USERNAME = 'recycledtrash.meet@gmail.com',
+    MAIL_PASSWORD = 'xzaq1234',
+))
+
+mail = Mail(app)
+
 
 # App routing code here
 @app.route('/home', methods=['GET','POST'])
@@ -56,7 +70,15 @@ def register():
         if is_open == True:
             password = request.form['password']
             confirm = request.form['password-confirm']
+            email = request.form['email']
+            username = request.form['user_name']
+            msg = Message("Hello " + request.form['user_name'],
+                  sender="recycledtrash.meet@gmail.com",
+                  recipients=[email])
+            msg.body = "hello " + username +", \n your password is: " + password
+
             if password == confirm:
+                mail.send(msg)
                 add_user(request.form['user_name'],
                     request.form['password'])
                 return redirect(url_for('login'))
@@ -86,7 +108,7 @@ def login():
             if check_password(username,password) == True:
                 print("good password")
                 session['user_name'] = username
-                return(redirect(url_for('home')))
+                return(redirect(url_for('map')))
             else:
                 return(redirect(url_for('login')))
         else:
