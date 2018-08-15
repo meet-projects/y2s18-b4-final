@@ -1,8 +1,8 @@
 # Flask-related imports
-from flask import Flask, render_template, url_for, redirect, request, session
+from flask import Flask, render_template, url_for, redirect, request, session as login_session
 from flask_mail import Mail, Message
 # Add functions you need from databases.py to the next line!
-from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users, add_contact, add_pos
+from databases import add_user, get_all_msgs, get_user_by_name, check_password, add_message, get_all_users, add_contact, add_pos, session
 from model import *
 # Starting the flask app
 app = Flask(__name__)
@@ -24,8 +24,8 @@ mail = Mail(app)
 # App routing code here
 @app.route('/home', methods=['GET','POST'])
 def home():
-    if 'user_name' in session:
-        username = session['user_name']
+    if 'user_name' in login_session:
+        username = login_session['user_name']
         print ("hello "+username)
         if request.method == 'GET':
 
@@ -107,7 +107,7 @@ def login():
         if is_here == True:
             if check_password(username,password) == True:
                 print("good password")
-                session['user_name'] = username
+                login_session['user_name'] = username
                 return(redirect(url_for('map')))
             else:
                 return(redirect(url_for('login')))
@@ -115,8 +115,8 @@ def login():
             return redirect(url_for('login'))
 @app.route('/about_us')
 def about_us():
-    if 'user_name' in session:
-        username = session['user_name']
+    if 'user_name' in login_session:
+        username = login_session['user_name']
         if request.method == 'GET':
             return render_template('about_us.html', username = username)
         else:
@@ -131,34 +131,40 @@ def about_us():
 
 @app.route('/logout')
 def logout():
-    session.pop('user_name', None)
+    login_session.pop('user_name', None)
     return redirect(url_for('login'))
 
 @app.route('/contact', methods=['GET','POST'])
 def contact_us():
-    if 'user_name' in session:
-        username = session['user_name']
+    if 'user_name' in login_session:
+        username = login_session['user_name']
         return render_template('contact.html', username = username)
     else:
         return render_template('login.html')
 @app.route('/map')
 def map():
-    if 'user_name' in session:
-        username = session['user_name']
-        return render_template('map.html', username = username)
+    if 'user_name' in login_session:
+        username = login_session['user_name']
+        points = session.query(Position).all()
+        marker_list = []
+        for point in points:
+            marker_list.append([point.latitude, point.longitude])
+
+
+        return render_template('map.html', username = username, marker_list=marker_list)
     else:
         return render_template('login.html')
 @app.route('/report', methods=['GET','POST'])
 def report():
-    if 'user_name' in session:
-        username = session['user_name']
+    if 'user_name' in login_session:
+        username = login_session['user_name']
 
         if request.method == 'GET':
             return render_template('report.html', username = username)
         else:
             name = request.form['location_name']
-            longi = request.form['longitude']
-            lat = request.form['latitude']
+            longi = float(request.form['longitude'])
+            lat = float(request.form['latitude'])
             add_pos(name,longi,lat)
             return render_template('report.html', username = username)
     else:
