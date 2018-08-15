@@ -169,7 +169,7 @@ def report():
             longi = float(request.form['longitude'])
             lat = float(request.form['latitude'])
             add_pos(name,longi,lat)
-            return render_template('report.html', username = username)
+            return redirect(url_for('map'))
     else:
         return render_template('login.html')
 @app.route('/profile/<string:username>')
