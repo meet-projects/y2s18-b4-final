@@ -81,7 +81,8 @@
 	    //marker.bindPopup("<b>ACME CO.</b><br />This st. 48<br />New York").openPopup()
 	    var markerList = {{marker_list}};
 	    for (var i=0; i<markerList.length; i++){
-	      marker = L.marker(markerList[i]).addTo(map);
+	    	marker = L.marker(markerList[i]).addTo(map);
+	    	marker.bindPopup("<b>ACME CO.</b><br />This st. 48<br />New York").openPopup()
 	    }
 	  </script>
 
