@@ -32,9 +32,10 @@
 		<a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
 		<a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
 		<a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
-		<a>hello <a href="{{url_for('profile')}}">{{username}}!</a>  </a>
-		<a class= "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
+		<a> hello {{username}}!   </a>
+		<a id = "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
 	</div>
+
 
 	<div id="share-buttons">
 
@@ -105,12 +106,14 @@
 		</div>
 		<br>
 		<br>
-		<div class="row" style="margin-top: 20%">
+		<h2 style="z-index: -10; right:32%; font-family: comfortaa; font-size: 70px; color:white; text-shadow: 2px 2px 4px #000000; position: fixed; ">Dtrash Team.</h2>
+		<div class="haha">
+		<div class="row" style="margin-top: 35%;">
 	
  
   <div class="column">
     <div class="card">
-      <img src="{{url_for('static', filename = 'einav.jpg')}}" alt="einav" style="width:200px;height: 300px;">
+      <img src="{{url_for('static', filename = 'einav.jpg')}}" alt="einav" style="width:200px;">
       <div class="container">
         <h2>Einav Raviv</h2>
         <p class="title">Designing manager & frontend developer</p>
@@ -137,7 +140,7 @@
   </div>
   <div class="column">
     <div class="card">
-      <img src="{{url_for('static', filename = 'idan.jpg')}}" alt="idan" style="width:200px;height: 300px;">
+      <img src="{{url_for('static', filename = 'idan.jpg')}}" alt="idan" style="width:50%">
       <div class="container">
         <h2>Idan Zamir</h2>
         <p class="title">fullstack developer</p>
@@ -149,12 +152,10 @@
       </div>
     </div>
   </div>
-</div>
 
-</div>
-<div class="column">
+  <div class="column">
     <div class="card">
-      <img src="{{url_for('static', filename = 'salwa.jpg')}}" alt="salwa" style="width:200px;height: 300px;">
+      <img src="{{url_for('static', filename = 'salwa.jpg')}}" alt="salwa" style="width:50%">
       <div class="container">
         <h2>Salwa Khaldi</h2>
         <p class="title">frontend developer</p>
@@ -165,9 +166,10 @@
       </div>
     </div>
   </div>
-<div class="column" >
+
+  <div class="column" >
     <div class="card">
-      <img src="{{url_for('static', filename = 'gasan.jpg')}}" alt="gasan" style="width:200px;height: 300px;">
+      <img src="{{url_for('static', filename = 'gasan.jpg')}}" alt="gasan" style="width:50%">
       <div class="container">
         <h2>Gasan Ashhab</h2>
         <p class="title">Content manager + frontend developer</p>
@@ -178,10 +180,13 @@
       </div>
     </div>
   </div>
-   
 
 </div>
 
+</div>
+
+
+   
 					<!-- Add JQuery and Bootstrap JS to the page -->
 					<!-- JQuery MUST BE BEFORE BOOTSTRAP -->
 					<script src="{{ url_for('static', filename='jquery.js') }}"></script>

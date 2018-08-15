@@ -254,6 +254,7 @@ html {
 
 .card {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	height: 600px;
 }
 
 .container {
@@ -261,7 +262,7 @@ html {
 	background-color: rgba(255,255,255,0.7);
 	width: 23%;
 	font-family: Comfortaa;
-	padding:30spx;
+	padding:30px;
 	margin-top: -20px;
 	position: relative;
 	height: 80%;
@@ -297,4 +298,10 @@ html {
 	z-index: -1000;
 	top: 0;
 	left: 0;
+}
+.row{
+	margin-top:35%; 
+	background-color: #e2c65f; 
+	z-index: 10000000; 
+	padding: 30px;
 }
