@@ -61,7 +61,7 @@
 		<a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
 		<a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
 		<a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
-		<a>hello {{username}}!   </a>
+		<a>hello <a href="{{url_for('profile')}}">{{username}}!</a>  </a>
 		<a class= "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
 	</div>
 	
