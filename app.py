@@ -177,6 +177,7 @@ def profile():
     if 'user_name' in login_session:
         username = login_session['user_name']
         posts = get_all_msgs_name(username)
+        print(posts)
         return render_template("profile.html",
             username=username,
             posts = posts
