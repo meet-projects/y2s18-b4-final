@@ -24,7 +24,8 @@ class Posts(Base):
     user_name = Column(String)
     message = Column(String)
     image = Column(String)
-
+    def __repr__(self):
+        return ("Name: {}, message: {}".format(self.user_name, self.message))
            
 class Contacts(Base):
     __tablename__ = "contacts"
