@@ -15,7 +15,7 @@ h1{
 }
 h2{color: black;}
 h2{
-	padding:30px;
+	padding-bottom:300px;
 	position:absolute;
 	top:25%;
 	width:50%;
@@ -28,9 +28,19 @@ body{
 
 .for_span{
 	position:absolute;
-	top:35%;
-	width:50;
+	top:40%;
+	width:200;
 	
+}
+.another_span{
+	position:absolute;
+	top:45%;
+	width:200;
+}
+.home_button{
+	position:absolute;
+	top:5%;
+	/*right: 200%;*/
 }
 
 
@@ -57,23 +67,23 @@ body{
 	<h2>your posted reviews:</h2>
 	{%for post in posts%}
 
-<<<<<<< HEAD
+
 	<div class="for_span">
 		<span>message: {{post.message}}</span>	
 	</div>
 
-=======
-
-	<span>your comment: {{post.message}}</span>
+	<div class = "another_span">
+		<span> comment: {{post.message}}</span>
+	</div>
 	<br>
->>>>>>> 1adfb662ba1100e3f5626c2d9c171dd37f259a55
 
 	{%endfor%}
 	<br>
 
 </div>
-
-<a href="{{ url_for('home') }}">back to home page</a>
+<div class = "home_button">
+	<a href="{{ url_for('home') }}"> home page</a>
+</div>
 </body>
 
 
