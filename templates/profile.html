@@ -1,70 +1,82 @@
 <DOCTYPE! html>
 <html>
 <head>
+	d>
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+
+		<!-- Required tags to make the website responsive-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Add Bootstrap CSS to the page -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 	<title>Profile page </title>
+
 	<style>
-h1{
-	color:black;
-}
-h1{
-	margin-bottom: 60;
-	position:absolute;
-	top:5%;
-	width:200%;
-	font-family: comfortaa;
-}
-h2{color: black;}
-h2{
-	padding-bottom:300px;
-	position:absolute;
-	top:25%;
-	width:50%;
-}
-body{
-	background-image:url("{{url_for('static',filename='')}}");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.p_post{
-	
-	text-align:center;	
-	border:1px solid black;
-	padding:15px 10px;
-}
-.p_posts{
-	position:absolute;
-	top:40%;
-}
-
-.home_button{
-	position:absolute;
-	top:5%;
-	/*right: 200%;*/
-}
-
 
 
 
 </style>
 </head>
 <body>
+	<div id="share-buttons">
+
+		<!-- Email -->
+		<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+			<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+		</a>
+		<br><br>
+		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+		</a>
+		<br> <br>
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+		</a>
+		<br> <br>
+		<!-- LinkedIn -->
+		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+			<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+		</a>
+		<br><br>
+		<!-- Print -->
+		<a href="javascript:;" onclick="window.print()">
+			<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+		</a>
+
+	</div>
+	<div class="fixed" style="font-family: Comfortaa; color:black;">
+		<img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
+		<a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+		<a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
+		<a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
+		<a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
+		<a  class="button button1" href="{{url_for('contact_us')}}">Contact Us</a>
+		<a>hello <a href = "{{url_for('profile')}}">{{username}}!</a></a>
+		<a class= "logout" href = "{{ url_for('logout') }}" style="position:relative;right:-5%; color:black; text-decoration: none;">Log out</a>
+	</div>
+	<center>
 
 <div class = "profile_header">
-	<br>
-	<h1>Welcome {{username}} </h1>
+
+	<h1 style="text-align: center; font-family: comfortaa; font-size: 48px; color:white; text-shadow: 2px 2px 4px #000000;"
+	> {{username}}, Welcome to your profile page. </h1>
+	<h2  style="text-align: center; font-family: comfortaa; font-size: 35px; color:white; text-shadow: 2px 2px 4px #000000;">Your Dtrash posts review:</h2>
 </div>
 
-<div class = "your comments">
 
-	<h2>your posted reviews:</h2>
-	<div class = "p_posts">
+			<div class="justify-center">
+
+	<div class = "posts" style="margin-left: 35%">
 	{%for post in posts%}
 
 
-	<div class="p_post">
+	<div id="post">
 		<span>
-		<bold>your comment:</bold>
 		<br>
 		{{post.message}}
 		</span>
@@ -73,20 +85,17 @@ body{
 
 	</div>
 
-
-	<br>
-
 	{%endfor%}
+	</div>
+
 </div>
 
 	<br>
+</center>
 
-</div>
-<div class = "home_button">
-	<a href="{{ url_for('home') }}" style = "position:fixed; top:0%;"> home page</a>
-</div>
 </body>
 
-
-
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+</html>
 

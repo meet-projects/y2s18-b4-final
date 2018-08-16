@@ -305,3 +305,29 @@ html {
 	z-index: 10000000; 
 	padding: 30px;
 }
+
+.p_post{
+	
+	text-align:center;	
+	border:1px solid black;
+	padding:15px 10px;
+}
+.p_posts{
+	position:absolute;
+	top:40%;
+}
+
+.home_button{
+	position:absolute;
+	top:5%;
+	/*right: 200%;*/
+}
+
+.profile_header{
+	background-color:  #2E5E21;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 1000px;
+	border-radius: 70px;
+	border-color: white;
+}
