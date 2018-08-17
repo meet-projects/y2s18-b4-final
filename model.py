@@ -14,10 +14,12 @@ class Users(Base):
     user_name = Column(String)
     password = Column(String)
     email = Column(String)
-
+    code = Column(String)
+    is_ver = Column(Boolean)
 
     def __repr__(self):
         return ("User Name: {}, Password: {}, Email: {}".format(self.user_name, self.password, self.email))
+
 class Posts(Base):
     __tablename__ = "messages"
     id = Column(Integer, primary_key = True)
@@ -26,7 +28,7 @@ class Posts(Base):
     image = Column(String)
     def __repr__(self):
         return ("Name: {}, message: {}".format(self.user_name, self.message))
-           
+
 class Contacts(Base):
     __tablename__ = "contacts"
     id = Column(Integer, primary_key = True)
@@ -49,4 +51,3 @@ class Position(Base):
 
     def __repr__(self):
         return ("name: {}\n, longi: {}\n, lati: {}\n\n".format(self.name, self.longitude, self.latitude))
-

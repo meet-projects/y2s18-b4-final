@@ -5,6 +5,8 @@
   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
   <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.woonsocketri.org/sites/woonsocketri/files/bulletins/recycling_1.jpg' />
+
 </head>
 <body>
   <div id="share-buttons">
@@ -37,7 +39,7 @@
   </div>
 <div class="fixed" style="font-family: Comfortaa; color:black;">
     <img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
-    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+    <a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a>
     <a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
     <a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
     <a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
@@ -47,7 +49,7 @@
   </div>
 
 <center>
-<!-- 
+<!--
 
 
  <form action="action_page.php">
@@ -62,7 +64,7 @@
      <label for="address"> Address&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input type="text" id="address" name="address" placeholder="Your address..">
     <br>
-    <br>	
+    <br>
     <input type="submit" class="btn btn-outline-success" value="Submit">
   </form> -->
 
@@ -73,20 +75,20 @@
 ">Found a trash bin that is not reported?</p>
   <p style="background-color: ; text-align: center; font-family: comfortaa; font-size: 30px;     text-shadow: 2px 2px 4px #000000;
 ">Click the button to add your own coordinates.</p>
-  
+
   <script>
   var x = document.getElementById("demo");
 
   function getLocation() {
       if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition);
-      } else { 
+      } else {
           x.innerHTML = "Geolocation is not supported by this browser.";
       }
   }
 
   function showPosition(position) {
-      // x.innerHTML = "Latitude: " + position.coords.latitude + 
+      // x.innerHTML = "Latitude: " + position.coords.latitude +
       // "<br>Longitude: " + position.coords.longitude;
       document.getElementById('long').value= position.coords.longitude;
       document.getElementById('lati').value= position.coords.latitude;

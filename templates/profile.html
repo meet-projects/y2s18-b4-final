@@ -1,7 +1,7 @@
 <DOCTYPE! html>
 <html>
 <head>
-	d>
+
 		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
 
@@ -12,6 +12,8 @@
 		<!-- Add Bootstrap CSS to the page -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+		<link rel='shortcut icon' type='image/x-icon' href='https://www.woonsocketri.org/sites/woonsocketri/files/bulletins/recycling_1.jpg' />
+
 	<title>Profile page </title>
 
 	<style>
@@ -51,7 +53,7 @@
 	</div>
 	<div class="fixed" style="font-family: Comfortaa; color:black;">
 		<img src="{{url_for('static', filename = 'logo.gif')}}" alt="Logo" width="150" height="91">
-		<a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a> 
+		<a class="button button1" href="{{ url_for('home') }}">Post Dtrash</a>
 		<a class="button button1" href="{{ url_for('map') }}">Map Dtrash</a>
 		<a class="button button1" href="{{ url_for('report') }}">Report Dtrash</a>
 		<a class="button button1" href="{{ url_for('about_us') }}">About Us</a>
@@ -98,4 +100,3 @@
 <script src="{{ url_for('static', filename='jquery.js') }}"></script>
 <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 </html>
-

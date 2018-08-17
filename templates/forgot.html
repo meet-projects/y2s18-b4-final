@@ -1,0 +1,41 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <link rel='shortcut icon' type='image/x-icon' href='https://www.woonsocketri.org/sites/woonsocketri/files/bulletins/recycling_1.jpg' />
+
+
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <title>forgot password</title>
+</head>
+
+<body>
+
+<center>
+    <form action = "/forgot_password" method="post" id = "post" style = "position:absolute; top:20%; margin-left:45%;">
+        <h1>get your password</h1>
+        <hr />
+        <span>enter your username</span>
+        <br>
+        <input type = "text" name = "username" placeholder="username">
+        <br>
+        <span>enter your email</span>
+        <br>
+        <input type = "text" name = "email" placeholder="email">
+        
+        <br>
+        <a href = "{{url_for('login')}}" class = "dropdown-item">here by accident? go back to the login page</a>
+
+        <input type = "submit" value = "submit" class = "btn btn-primary registerin registerin1">
+
+
+    </form>
+</center>
+
+
+</body>
+
+
+
+</html>

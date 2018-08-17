@@ -4,6 +4,7 @@ from model import *
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import random
 
 # You can change the name of your database, just change project.db to whatever you want (make sure to include .db at the end!)
 # Make sure you have the same name for the database in the app.py file!
@@ -15,16 +16,24 @@ session = DBSession()
 # Your database functions are located under here (querying, adding items, etc.)
 
 # Example of adding a student:
-def add_user(user_name, password, email):
-    account = Users(user_name=user_name, password=password, email = email)
-    session.add(account)
-    session.commit()
+
 def get_user_by_name(name):
 	account = session.query(Users).filter_by(user_name = name).first()
 	return account
 def get_all_users():
     users = session.query(Users).all()
     return users
+def add_user(user_name, password, email):
+    code = str(random.randint(1000,10000))
+
+    for i in get_all_users():
+        if code == i.code:
+            code = str(random.randint(1000,10000))
+
+
+    account = Users(user_name=user_name, password=password, email = email, code = code, is_ver = False)
+    session.add(account)
+    session.commit()
 def check_password(user_name, entered_password):
 	account = session.query(Users).filter_by(user_name = user_name).first()
 	if account.password == entered_password:

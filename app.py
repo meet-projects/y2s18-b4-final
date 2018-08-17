@@ -75,14 +75,16 @@ def register():
             msg = Message("Hello " + request.form['user_name'],
                   sender="recycledtrash.meet@gmail.com",
                   recipients=[email])
-            msg.body = "hello " + username +", \n your password is: " + password
+
 
             if password == confirm:
-                mail.send(msg)
                 add_user(request.form['user_name'],
                     request.form['password'],
                     request.form['email'])
-                return redirect(url_for('login'))
+                msg.body = "hello " + username +", \n your password is: " + password + "\nto verify your account, enter this code: "+get_user_by_name(username).code
+                mail.send(msg)
+
+                return redirect(url_for('verify'))
             else:
                 return redirect(url_for('register'))
         else:
@@ -108,8 +110,11 @@ def login():
         if is_here == True:
             if check_password(username,password) == True:
                 print("good password")
-                login_session['user_name'] = username
-                return(redirect(url_for('map')))
+                if get_user_by_name(username).is_ver == True:
+                    login_session['user_name'] = username
+                    return(redirect(url_for('map')))
+                else:
+                    return redirect(url_for('verify'))
             else:
                 return(redirect(url_for('login')))
         else:
@@ -186,9 +191,45 @@ def profile():
     else:
         return redirect(url_for('login'))
 
+@app.route('/verify', methods = ['GET','POST'])
+def verify():
+    if request.method == 'GET':
+        return render_template('verify.html')
+    else:
+        for user in get_all_users():
+            if request.form['username'] == user.user_name:
+                is_right = True
+        if is_right == True:
+            if request.form['code'] == get_user_by_name(request.form['username']).code:
+                get_user_by_name(request.form['username']).is_ver = True
+                return redirect(url_for('login'))
+            else:
+                return redirect(url_for('verify'))
+@app.route('/forgot_password', methods = ['GET', 'POST'])
+def forgot_password():
+    if request.method == 'GET':
+        return render_template('forgot.html')
+    else:
+        username = request.form['username']
+        email = request.form['email']
+        is_verified = False
+        for account in get_all_users():
+            if account.user_name == username:
+                if account.email == email:
+                    is_verified = True
+        if is_verified == True:
+            msg = Message("Hello " + request.form['username'],
+                  sender="recycledtrash.meet@gmail.com",
+                  recipients=[email])
+            msg.body = "hello "+username + ",\n your password is: "+get_user_by_name(username).password + "\n thank you for using our services!"
+            mail.send(msg)
+            return redirect(url_for('login'))
+        else:
+            return redirect(url_for('forgot_password'))
+
+
 
 
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
-
